@@ -53,7 +53,7 @@ body {
     margin           : 0px;
 }
 
-i {
+.underscore {
     text-decoration  : solid underline #fff67d 3px;
     font-weight      : bold;
     font-family      : Georgia, 'Times New Roman', Times, serif;
@@ -66,7 +66,7 @@ i {
     margin-top       : 37px;
 }
 
-svg {
+svg, .icons i {
     width           : 12px;
     height          : 12px;
     margin-right    : 15px;
