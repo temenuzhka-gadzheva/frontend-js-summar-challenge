@@ -1,0 +1,74 @@
+body {
+    background-color : #fff67d;
+    margin           : 0px;
+    max-width        : 800px;
+    height           : 600px;
+}
+
+
+.information {
+
+    background-color : white;
+    width            : 730px;
+    height           : 530px;
+    box-shadow       : #f8ed73 0px 2px 4px 0px, #dad165 0px 2px 16px 0px;
+    display          : block;
+    margin-left      : 50%;
+    margin-top       : 13%;
+}
+
+
+.title {
+    color            : #4a4a4a;
+    margin           : 0px;
+    font-size        : 24px;
+    padding          : 124px 175px 38px 180px;
+}
+
+.acticle {
+    width            : 360px;
+    height           : 150px;
+    margin-left      : 184px;
+    padding-top      : 2px;
+    padding-bottom   : 2px;
+    margin-right     : 178px;
+}
+
+.introduction {
+    line-height      : 18px;
+    margin           : 0px;
+}
+
+.interest {
+    padding-top      : 24px;
+    font-size        : 14px;
+    line-height      : 18px;
+    margin           : 0px;
+}
+
+.name {
+    font-size        : 11px;
+    line-height      : 18px;
+    display          : inline-block;
+    margin           : 0px;
+}
+
+i {
+    text-decoration  : solid underline #fff67d 3px;
+    font-weight      : bold;
+    font-family      : Georgia, 'Times New Roman', Times, serif;
+    font-size        : 11px;
+}
+
+.line {
+    border           : 0.5px solid #f0f0f0;
+    box-shadow       : #f7f7f7 0px 2px 4px 0px;
+    margin-top       : 37px;
+}
+
+svg {
+    width           : 12px;
+    height          : 12px;
+    margin-right    : 15px;
+    margin-top      : 25px;
+}
