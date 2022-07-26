@@ -1,0 +1,133 @@
+body {
+    margin            : 0px;
+    padding           : 0px;
+    background-color  : #f9cd8f;
+}
+
+.wrapper {
+    width             : 654px;
+    height            : 404px;
+    margin-left       : 27%;
+    margin-top        : 10%;
+}
+
+.intro {
+    background-color  : #474652;
+    width             : 308px;
+    height            : 404px;
+    float             : left;
+}
+
+.bold-heading {
+    padding-top         : 52px;
+    padding-left        : 40px;
+    color               : #ffffff;
+    margin              : 0px;
+    margin-bottom       : 7.5px;
+    font-size           : 25px;
+    font-family         : Arial, sans-serif;
+
+}
+
+.heading { 
+    color               :   #ffffff;
+    padding-left        : 40px;
+    padding-right       : 44px;
+    margin              : 0px;
+    margin-top          : 7.5px;
+    font-size           : 28px;
+    font-family         : 'Arial Narrow', sans-serif;
+    
+}
+
+.line {
+    width           : 40px;
+    border          : 2px solid #f5755b;
+    background-color: #f5755b;
+    margin-left     : 43px;
+    margin-bottom   : 171px;
+}
+
+#person {
+    border-radius    : 50%;
+    width            : 60px;
+    height           : 60px;
+    float            : left;
+    margin-left      : 46px;
+}
+.actress-first-name {
+
+    display          : inline-block;
+    color            : #a4a4aa;
+    margin-left      : 12px;
+}
+
+.actress-last-name {
+    display          : inline-block;
+    color            : #e9e9eb;
+}
+
+.description {
+    width            : 346px;
+    height           : 404px;
+    background-color : white;
+    float: right;
+}
+
+#exit-icon { 
+    margin-left       : 295px;
+    margin-top        : 33px;
+    margin-right      : 35px;
+    color             : #83848f;
+}
+
+.large-letter {
+    margin-left       : 0px;
+    margin-right      : 0px;
+    font-size         : 30px;
+    font-family       : Arial, Helvetica, sans-serif;
+    display: inline;
+}
+
+
+.end {
+    margin-left        : 35px;
+    font-size          : 11px;
+    font-family        : Arial, Helvetica, sans-serif;
+    margin-right       : 39px;
+    line-height        : 17px;
+    margin-bottom      : 21px;
+}
+
+.start {
+    margin-left        : 35px;
+    font-size          : 11px;
+    font-family        : Arial, Helvetica, sans-serif;
+    margin-right       : 37px;
+    line-height        : 17px;
+    display            : inline-block;
+}
+
+.shadow {
+       height: 10px;
+       border: 0;
+       box-shadow: 0 10px 10px -10px #e2e2e3 inset;
+      
+}
+
+.date {
+    font-size          : 11px;
+    color              : #898993;
+    margin-left        : 35px;
+    float              : left;
+    margin-right       : 109px;
+}
+
+.time{
+    color              : black;
+}
+
+#ellipsis {
+   float               : right;
+    margin-left        : 67px;
+}
