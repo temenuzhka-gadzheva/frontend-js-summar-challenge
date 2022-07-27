@@ -109,9 +109,9 @@ body {
 }
 
 .shadow {
-       height: 10px;
-       border: 0;
-       box-shadow: 0 10px 10px -10px #e2e2e3 inset;
+       height          : 10px;
+       border          : 0;
+       box-shadow      : 0 10px 10px -10px #e2e2e3 inset;
       
 }
 
@@ -119,15 +119,25 @@ body {
     font-size          : 11px;
     color              : #898993;
     margin-left        : 35px;
-    float              : left;
+    display            : inline;
     margin-right       : 109px;
+    font-family        : Arial, Helvetica, sans-serif;
 }
 
 .time{
     color              : black;
+    font-family        : Arial, Helvetica, sans-serif;
 }
 
+#heart {
+
+    display           : inline;
+    color             : #f3745b;
+}
 #ellipsis {
-   float               : right;
-    margin-left        : 67px;
+
+   display             : inline;
+   margin-right         : 9.5px;
+
+
 }
