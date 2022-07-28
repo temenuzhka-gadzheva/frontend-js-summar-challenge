@@ -12,86 +12,93 @@ body {
     box-shadow        : 0px 10px 18px #c4924d;
 }
 
-.intro {
-    background-color  : #474652;
+.homepage {
+    float             : left;
     width             : 308px;
     height            : 404px;
-    float             : left;
+    background-color  : #474652;
 }
 
 .bold-heading {
-    padding-top         : 52px;
-    padding-left        : 40px;
-    color               : #ffffff;
     margin              : 0px;
     margin-bottom       : 7.5px;
+    padding-top         : 52px;
+    padding-left        : 40px;
     font-size           : 25px;
     font-family         : Arial, sans-serif;
-
+    color               : #ffffff;
 }
 
 .heading { 
-    color               :   #ffffff;
-    padding-left        : 40px;
-    padding-right       : 44px;
     margin              : 0px;
     margin-top          : 7.5px;
+    padding-left        : 40px;
+    padding-right       : 44px;
     font-size           : 28px;
     font-family         : 'Arial Narrow', sans-serif;
-    
+    color               :  #ffffff;
 }
 
-.line {
-    width           : 40px;
-    border          : 2px solid #f5755b;
-    background-color: #f5755b;
-    margin-left     : 43px;
-    margin-bottom   : 171px;
+.heading-highlighting {
+    width              : 40px;
+    margin-left        : 43px;
+    margin-bottom      : 171px;
+    background-color   : #f5755b;
+    border             : 2px solid #f5755b;
 }
 
-#person {
-    border-radius    : 50%;
+
+#homepage-person-image {
+    float            : left;
     width            : 60px;
     height           : 60px;
-    float            : left;
     margin-left      : 46px;
+    border-radius    : 50%;
 }
-.actress-first-name {
+.person-first-name {
 
     display          : inline-block;
-    color            : #a4a4aa;
     margin-left      : 12px;
+    color            : #a4a4aa;
 }
 
-.actress-last-name {
+.person-last-name {
     display          : inline-block;
     color            : #e9e9eb;
 }
 
 .description {
-    width            : 346px;
-    height           : 404px;
-    background-color : white;
-    float            : right;
+    float              : right;
+    width              : 346px;
+    height             : 404px;
+    background-color   : white;
 }
 
-#exit-icon { 
+#descriptoin-exit-icon { 
     margin-left       : 295px;
     margin-top        : 33px;
     margin-right      : 35px;
     color             : #83848f;
 }
 
-.large-letter {
+.first-paragraph-of-text {
+    display            : inline-block;
+    margin-left        : 35px;
+    margin-right       : 37px;
+    font-size          : 11px;
+    line-height        : 17px;
+    font-family        : Arial, Helvetica, sans-serif;
+}
+
+.description-first-large-letter{
+    display           : inline;
     margin-left       : 0px;
     margin-right      : 0px;
     font-size         : 30px;
     font-family       : Arial, Helvetica, sans-serif;
-    display           : inline;
 }
 
-
-.end {
+.last-paragraph-of-text {
     margin-left        : 35px;
     font-size          : 11px;
     font-family        : Arial, Helvetica, sans-serif;
@@ -100,16 +107,7 @@ body {
     margin-bottom      : 21px;
 }
 
-.start {
-    margin-left        : 35px;
-    font-size          : 11px;
-    font-family        : Arial, Helvetica, sans-serif;
-    margin-right       : 37px;
-    line-height        : 17px;
-    display            : inline-block;
-}
-
-.shadow {
+.separator {
        height          : 10px;
        border          : 0;
        box-shadow      : 0 10px 10px -10px #e2e2e3 inset;
@@ -117,28 +115,27 @@ body {
 }
 
 .date {
-    font-size          : 11px;
-    color              : #898993;
-    margin-left        : 35px;
     display            : inline;
+    margin-left        : 35px;
     margin-right       : 109px;
+    font-size          : 11px;
     font-family        : Arial, Helvetica, sans-serif;
+    color              : #898993;
 }
 
 .time{
-    color              : black;
     font-family        : Arial, Helvetica, sans-serif;
+    color              : black;
 }
 
-#heart {
-
-    display           : inline;
-    color             : #f3745b;
-}
-#ellipsis {
+#ellipsis-icon {
 
    display             : inline;
    margin-right        : 9.5px;
+}
 
+#heart-icon {
 
+    display           : inline;
+    color             : #f3745b;
 }
