@@ -1,74 +1,71 @@
 body {
-    background-color : #fff67d;
-    margin           : 0px;
     max-width        : 800px;
     height           : 600px;
-}
-
-
-.information {
-
-    background-color : white;
-    width            : 730px;
-    height           : 530px;
-    box-shadow       : #f8ed73 0px 2px 4px 0px, #dad165 0px 2px 16px 0px;
-    display          : block;
-    margin-left      : 50%;
-    margin-top       : 13%;
-}
-
-
-.title {
-    color            : #4a4a4a;
     margin           : 0px;
-    font-size        : 24px;
-    padding          : 124px 175px 38px 180px;
+    background-color : #fff67d;
 }
 
-.acticle {
-    width            : 360px;
-    height           : 150px;
-    margin-left      : 184px;
-    padding-top      : 2px;
-    padding-bottom   : 2px;
-    margin-right     : 178px;
-}
-
-.introduction {
-    line-height      : 18px;
-    margin           : 0px;
-}
-
-.interest {
-    padding-top      : 24px;
-    font-size        : 14px;
-    line-height      : 18px;
-    margin           : 0px;
-}
-
-.name {
-    font-size        : 11px;
-    line-height      : 18px;
-    display          : inline-block;
-    margin           : 0px;
-}
-
-.underscore {
-    text-decoration  : solid underline #fff67d 3px;
-    font-weight      : bold;
-    font-family      : Georgia, 'Times New Roman', Times, serif;
-    font-size        : 11px;
-}
-
-.line {
-    border           : 0.5px solid #f0f0f0;
-    box-shadow       : #f7f7f7 0px 2px 4px 0px;
-    margin-top       : 37px;
-}
-
-svg, .icons i {
+i, svg {
     width           : 12px;
     height          : 12px;
     margin-right    : 15px;
     margin-top      : 25px;
+}
+
+.information {
+    display          : block;
+    width            : 730px;
+    height           : 530px;
+    margin-left      : 50%;
+    margin-top       : 13%;
+    background-color : white;
+    box-shadow       : #f8ed73 0px 2px 4px 0px, #dad165 0px 2px 16px 0px;
+}
+
+.title {
+    margin           : 0px;
+    padding          : 124px 175px 38px 180px;
+    font-size        : 24px;
+    color            : #4a4a4a;
+}
+
+.article {
+    width            : 360px;
+    height           : 150px;
+    margin-left      : 184px;
+    margin-right     : 178px;
+    padding-top      : 2px;
+    padding-bottom   : 2px;
+}
+
+.introduction {
+    margin           : 0px;
+    line-height      : 18px;
+}
+
+.person-name {
+    display          : inline-block;
+    margin           : 0px;
+    font-size        : 11px;
+    line-height      : 18px;
+}
+
+.underscore {
+    font-size        : 11px;
+    font-weight      : bold;
+    font-family      : Georgia, 'Times New Roman', Times, serif;
+    text-decoration  : solid underline #fff67d 3px;
+}
+
+.interest {
+    margin           : 0px;
+    padding-top      : 24px;
+    font-size        : 14px;
+    line-height      : 18px;
+}
+
+.separator {
+    margin-top       : 37px;
+    border           : 0.5px solid #f0f0f0;
+    box-shadow       : #f7f7f7 0px 2px 4px 0px;
 }
