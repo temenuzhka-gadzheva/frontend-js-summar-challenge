@@ -1,0 +1,112 @@
+body {
+    margin                 :0px;
+    padding                : 0px;
+    background-color       : #a1a8b3;
+}
+
+strong {
+    color                  : #b4842d;
+}
+
+.wrapper {
+    width                  : 720px;
+    height                 : 464px;
+    margin-left            : 15%;
+    margin-top             : 2%;
+    box-shadow             : 20px 20px 50px 15px #818397;
+}
+
+.text-to-translate-container {
+    float                     : left;
+    width                     : 360px;
+    height                    : 464px;
+    background-color          : #223943;
+
+}
+
+.text-to-translate-container-header {
+    width                        : 360px;
+    height                       : 75px;
+    background-color             : #2a3f49 ;
+}
+
+.back-to-dashboard-container {
+    float                        : left;
+    margin-top                   : 13px;
+    margin-left                  : 20px;
+    margin-right                 : 160px;
+    font-size                    : 7px;
+    font-family                  : Arial, Helvetica, sans-serif;
+    color                        : #485a62;
+}
+
+.translation-functions-icons-container {
+    float                        : right;
+    margin-right                 : 20px;
+    margin-bottom                : 0px;
+    font-size                    : 12px;
+    color                        : #607176;
+}
+
+#translation-function-icon {
+    margin-right               : 14px;
+}
+
+.translation-functions-check-circle-icon-container {
+    float                          : right;
+    margin-top                     : 0px;
+    margin-right                   : 25px;
+    font-size                      : 7px;
+}
+
+#check-icon {
+    margin-right                  : 14px;
+}
+
+#check-icon-blue-color {
+    margin-right                  : 14px;
+    color                         : #4cb8e9;
+}
+
+.language-to-translate {
+    margin                         : 0px;
+    margin-left                    : 30px;
+    font-size                      : 5px;
+    font-family                    : Arial, Helvetica, sans-serif ;
+    color                          : #5a6b71;
+}
+
+.title {
+    margin-top                     : 5px;
+    margin-left                    :23px ;
+    font-size                      : 16px;
+    font-family                    : 'Franklin Gothic Medium', sans-serif ;
+    color                          : #99a3a8;
+}
+
+.text-to-translate {
+    width                            : 290px;
+    height                           : 320px ;
+    margin                           : 25px 35px 30px 35px;
+    font-size                        : 10.9px;
+    font-family                      : 'Times New Roman', Times, serif
+}
+
+.text-to-translate-first-paragraph, 
+.text-to-translate-second-paragraph {
+
+    line-height          : 1.7;
+    color                : #99a3a8;
+}
+.text-to-translate-second-paragraph {
+   padding-top           : 10px;
+   margin-top            : 0px;
+}
+
+
+.translated-text-container {
+    float                     : right;
+    width                     : 360px;
+    height                    : 464px;
+    background-color          : white;
+}
