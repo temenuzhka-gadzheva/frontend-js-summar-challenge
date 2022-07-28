@@ -3,37 +3,37 @@ body {
     padding           : 0px;
     margin-top        : 70px;
     margin-bottom     : 70px;
-    margin-left       : 270px;
+    margin-left       : 350px;
     margin-right      : 270px;
     background-color  : #f5627e;
     font-family       : Arial, Helvetica, sans-serif;
 }
 
-
 .calendar {
     width             : 260px;
     height            : 460px;
-    background-color  : #f9f9fb;
     margin-left       : 270px;
     margin-right      : 270px;
+    background-color  : #f9f9fb;
 }
 
 #calendar-icon {
     display           : inline;
     width             : 50px;
     height            : 50px;
-    color             : #c1c0ce;
     margin-right      : 20px;
+    color             : #c1c0ce;
 }
 
 #menu-icon {
     display           : inline;
     width             : 50px;
     height            : 50px;
-    color             : #c1c0ce;
     margin-left       : 20px;
+    color             : #c1c0ce;
 
 }
+
 .title {
     padding-top       : 25px;
     margin-bottom     : 25px;
@@ -41,18 +41,121 @@ body {
 
 .header {
     display           : inline;
-    color             : #c1c0ce;
     margin-left       : 55px;
     margin-right      : 55px;
     font-size         : 16px;
+    color             : #c1c0ce;
 }
-strong {
+
+.day-now-bold {
+    font-size         : 12px;
     color             : #bdbccc;
-    font-size         : 12px;
 }
+
 .datetime {
-    color             : #c9c9d5; 
-    font-size         : 12px;
     margin-left       : 50px;
+    margin-bottom     : 29px;
+    font-size         : 12px;
+    color             : #c9c9d5; 
 
 }
+
+.event {
+    margin-left        : 20px;
+    margin-right       : 20px;
+    margin-bottom      : 10px;
+    border-radius      : 2%;
+    color              : #ffffff;
+    box-shadow         : 2px 2px 30px 10px #ecebf1;
+}
+
+.event-start-time-bold {
+    display           : inline;
+    margin-left       : 15px;
+    margin-right      : 40px;
+    font-size         : 10px;
+    font-family       : 'Times New Roman', Times, sans-serif;
+    color             : #8f8e9c;
+}
+
+.event-title {
+    display           : inline;
+    margin-right      : 15px;
+    font-size         : 12px;
+    color             : #6c6d81;
+}
+
+.event-location-without-hour {
+    margin-left       : 28px;
+    margin-right      : 30px;
+    color             : #8f8e9c;
+}
+
+.event-location {
+    display           : inline;
+    margin-right      : 35px;
+    margin-left       : 17px;
+    font-size         : 9px;
+    color             : #c9c9d5; 
+}
+
+.event-status {
+    display            :inline;
+    font-size          : 7px;
+    color              : #d6d6e0;
+}
+
+#event-circle-status-work-icon {
+    font-size             : 5px;
+    color                 : #fe9053;
+}
+
+#event-circle-status-personal-icon {
+    font-size             : 5px;
+    color                 : #f86e85;
+    
+}
+.event-location-home {
+    display           : inline;
+    margin-right      : 62px;
+    margin-left       : 17px;
+    font-size         : 9px;
+    color             : #c9c9d5; 
+}
+
+.event-daily-start-time-bold {
+    display           : inline;
+    margin-left       : 15px;
+    margin-right      : 36px;
+    font-size         : 10px;
+    font-family       : 'Times New Roman', Times, sans-serif;
+    color             : #8f8e9c;
+}
+
+#event-circle-status-desing-icon {
+    font-size             : 5px;
+    color                 : #39c7f5;
+}
+
+.event-button-container {
+
+    width                  : 220px;
+    height                 : 36px;
+    margin-top             : 30px;
+    margin-left            : 18px;
+    font-size              : 12px;
+    border-radius          : 2%;
+    text-align             : center;
+    font-family            : 'Times New Roman', Times, serif;
+    color                  : white;
+    background             : linear-gradient(#f14f74, #ff8791);
+
+}
+
+.event-button {
+    padding-top            : 13px;
+    border                 : 0px;
+    color                  : white;
+    background             : linear-gradient(#f14f74, #ff8791);
+}
+
