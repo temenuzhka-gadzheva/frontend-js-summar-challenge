@@ -1,18 +1,11 @@
 body {
     margin           : 0px;
     padding          : 0px;
+    margin-left      : 29%;
+    margin-top       : 6%;
     background-color : #f2f3f5;
 }
 
-.wrapper {
-    width            : 665px;
-    height           : 454px;
-    box-shadow       : #e7e8ec 0px 2px 4px 0px,
-                       #e7e8ec 0px 2px 16px 0px;
-    background-color : white;
-    margin-left      : 10%;
-    margin-top       : 2%;
-}
 header {
     padding-top      : 42px;
 }
@@ -25,44 +18,59 @@ ul {
 
 li {
     display         : inline;
-    font-family     : Arial, Helvetica, sans-serif;
-    color           : #797c8b;
     margin-left     : 60px;
     font-size       : 10px;
     font-weight     : 600;
+    font-family     : Arial, Helvetica, sans-serif;
+    color           : #797c8b;
 }
 
-.first {
+.wrapper {
+    width            : 665px;
+    height           : 454px;
+    box-shadow       : #e7e8ec 0px 2px 4px 0px,
+                       #e7e8ec 0px 2px 16px 0px;
+    background-color : white;
+}
+
+.navigation-first-element {
     margin-left     : 49px;
 }
 
-
-.line {
+.separator {
     float            : left;
     width            : 41px;
+    margin-left      : 49px;
     border           : 1px solid  #5fffe7;
     background-color :  #5fffe7;
-    margin-left      : 49px;
 }
 
-
-
 .date {
-    color           :#b9bcc5 ;
     display         :inline;
-    font-family     : Arial, Helvetica, sans-serif;
     font-size       : 10px;
+    font-family     : Arial, Helvetica, sans-serif;
+    color           :#b9bcc5 ;
 }
 
 .year {
-    color           : #72778b;
-    font-weight     : 600;
-    font-family     : Arial, Helvetica, sans-serif;
-    font-size       : 10px;
-    margin-left     : 111px;
-    margin-right    : 36px;
     float           : right;
+    margin-left     : 111px;
     margin-top      : 10px;
+    margin-right    : 36px;
+    font-weight     : 600;
+    font-size       : 10px;
+    font-family     : Arial, Helvetica, sans-serif;
+    color           : #72778b;
+}
+
+.degree-statistic {
+    display            : inline-block ;
+    width              : 140px;
+    height             : 140px;
+    margin-top         : 60px;
+    margin-left        : 235px;
+    border             : 6px  solid #5fffe7;
+    border-radius      : 50%;
 }
 
 .temperature {
@@ -80,7 +88,7 @@ li {
    font-family      : Arial, Helvetica, sans-serif;
 }
 
-#circle {
+#circle-icon {
   float             : right;
   padding-top       : 34px;
   padding-right     : 11px;
@@ -89,29 +97,15 @@ li {
 }
 
 #thermometer {
-    color          : #5fffe7;
-    border-color   : #e3e3ed;
     float          : right;
     margin-top     : 153px;
     margin-right   : 46px;
+    color          : #5fffe7;
+    border-color   : #e3e3ed;
 }
 
-.transperant {
-    border             : 6px  solid #5fffe7;
-    border-radius      : 50%;
-    width              : 140px;
-    height             : 140px;
-    margin-top         : 60px;
-    margin-left        : 235px;
-   display             :inline-block ;
-}
 
-.temp {
-    color           : #b9bcc5;
-    font-family     : Arial, Helvetica, sans-serif;
-}
-
-.header {
+.bold-title {
     font-family     : Arial, Helvetica, sans-serif ;
     font-size       : 16px;
     color           : #8b919f;
@@ -119,63 +113,35 @@ li {
     margin-top      : 20px;
 }
 
-
-
-
-.description {
-    font-family     : Arial, Helvetica, sans-serif;
-    font-size       : 10px;
-    /*display         : inline;*/
-    float           : right ;
-    color           : #82879a;
-    margin-top      : 24px;
-    margin-left     : 13px;
-
-}
-
-.parent {
-    border             : 1px  solid white;
-    box-shadow         : #e7e8ec 0px 2px 4px 0px,
-                         #e7e8ec 0px 2px 16px 0px;
-    border-radius      : 50%;
-   /* display            : inline;*/
-   width               : 30px;
-   height              : 30px;
-   float               : left;
-    margin-left        : 30px;
-}
-
-.footer {
+.title {
     color           : #b9bcc5;
-    float           : right;
-    padding-left    : 6px;
-    margin-right    : 36px;
+    font-family     : Arial, Helvetica, sans-serif;
 }
 
-.left {
+.footer-left-side {
     float           :left ;
     margin-top      : 20px;
     margin-left     : 46px;
 }
 
-.right {
-    float           :right ;
-    margin-top      : 20px;
+.fontawesome-container {
+    float               : left;
+    margin-left         : 30px;
+    width               : 30px;
+    height              : 30px;
+    border              : 1px  solid white;
+    box-shadow          : #e7e8ec 0px 2px 4px 0px,
+                          #e7e8ec 0px 2px 16px 0px;
+    border-radius       : 50%;
 
 }
+
 #icon-light {
     margin-left     : 9px;
     margin-top      : 7px;
 }
 
-#icon-lock {
-    margin-left     : 9px;
-    margin-top      : 7px;
-    color           : #72778b;
-}
-
-
-#parent {
+#fontawesome-container {
     border             : 1px  solid #e6e9f0;
     box-shadow         : #e7e8ec 0px 2px 4px 0px,
                          #e7e8ec 0px 2px 16px 0px;
@@ -186,3 +152,38 @@ li {
    float               : left;
    margin-left         : 30px;
 }
+
+.bold-description {
+    float           : right;
+    margin-top      : 24px;
+    margin-left     : 13px;
+    font-family     : Arial, Helvetica, sans-serif;
+    font-size       : 10px;
+    color           : #82879a;
+
+}
+
+.description {
+    float           : right;
+    padding-left    : 6px;
+    margin-right    : 36px;
+    color           : #b9bcc5;
+}
+
+.footer-right-side {
+    float           :right;
+    margin-top      : 20px;
+
+}
+
+#icon-lock {
+    margin-left     : 9px;
+    margin-top      : 7px;
+    color           : #72778b;
+}
+
+
+
+
+
+  
