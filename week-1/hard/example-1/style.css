@@ -1,7 +1,7 @@
 body {
     margin                 : 0px;
     padding                : 0px;
-    background             : #eaeff8;
+   /* background             : #eaeff8;*/
 }
 
 ul {
@@ -10,10 +10,10 @@ ul {
 }
 
 li {
-    float                   : left;
+     float                  : left;
      list-style             : none;
      margin-top             : 30px;
-     margin-right           : 36px;
+     margin-right           : 250px;
      color                  : #425466;
 }
 
@@ -23,37 +23,33 @@ span {
     font-family             : Arial, Helvetica, sans-serif;
 }
 
- .wrapper {
-    width                  : 1400px;
-    height                 : 700px;
-    margin-left            : 5%;
-    background             : linear-gradient( #e5ebf5,
-    #eaeff8);
- }
-
- .left-sidebar-container {
-    float                   : left;
-    width                   : 230px;
-    height                  : 740px;
-    background-color        : #eaeff8;
+.left-container {
+    float             : left;
+    width             : 20%;
+    height            : 770px;
+    margin            : 0px;
+    padding           : 0px;
+    background-color  : #eaeff8;
 }
 
 .left-sidebar {
-    float                  : left;
-    width                  : 200px;
-    height                 : 670px;
-    margin                 : 0px;
-    margin-left            : 90px;
-    margin-top             : 30px;
-    padding                : 0px;
-    border-radius          : 25px 0px 0px 25px;
-    background-color       : white;
+    float             : left;
+    width             : 400px;
+    height            : 710px;
+    margin            : 0px;
+    margin-left       : 70px;
+    margin-top        : 20px;
+    padding           : 0px;
+    border-radius     : 25px 0px 0px 25px;
+    box-shadow        : 10px 10px 40px 10px #edf2f7;
+    background-color  : white;  
 }
 
 .lightning-bolt-bars-container {
     float                  : left;
     width                  : 40px;
     height                 : 35px;
+    margin                 : 0px;
     margin-left            : 30px;
     margin-top             : 30px;
     text-align             : center;
@@ -62,9 +58,6 @@ span {
                                              #606eff);
 }
 
-.lightning-bolt-bar-icons {
-    margin-top                : 20px;
-}
 #bars-icon, #leghtning-bold-icon {
     font-size                  : 14px;
     color                      : white;
@@ -76,9 +69,11 @@ span {
 
 .title {
     float                       : right;
-    margin-top                  : 33px;
-    margin-right                : 65px;
+    margin                      : 0px;
+    margin-top                  : 37px;
+    margin-left                 : 5px;
     font-weight                 : 800;
+    margin-right                : 260px;
     font-family                 : Arial, Helvetica, sans-serif;
     background                  : -webkit-linear-gradient(#c067ff,
                                                           #606eff);
@@ -111,10 +106,10 @@ span {
 
 .message-count {
     float                 : right;
-    width                 : 30px;
+    width                 : 35px;
     height                : 20px;
     margin                : 0px;
-    margin-left           : 20px;
+    margin-left           : 50px;
     border-radius         : 10px 10px 10px 10px;
     text-align            : center ;
     font-weight           : 800;
@@ -140,10 +135,10 @@ span {
 
 .notification-count {
     float                 : right;
-    width                 : 30px;
+    width                 : 40px;
     height                : 20px;
     margin                : 0px;
-    margin-left           : 20px;
+    margin-left           : 40px;
     border-radius         : 10px 10px 10px 10px;
     text-align            : center ;
     font-weight           : 800;
@@ -152,29 +147,38 @@ span {
     color                 : #f26b6d;
 }
 
+.right-container {
+    float             : right;
+    width             : 80%;
+    height            : 770px;
+    margin            : 0px;
+    padding           : 0px;
+    background-color  : #e4eaf4;
+}
 
-
-.right-side {
-    float                          : right;
-    margin                         : 0px;
-    padding                        : 0px;
-    width                          : 1100px;
-    background-color               : #e1e8f2;
-    border-radius                  : 0px 0px 20px 0px;
+.right-wrapper {
+    float              : right;
+    width              : 1163px;
+    height             : 710px;
+    margin             : 0px;
+    margin-top         : 20px;
+    margin-right       : 52px;
+    padding            : 0px;
+  /*  opacity            : 0.7;*/
+    border-radius      : 0px 25px 25px 0px;
+    background-color   : #f7fafc;
 }
 
 .top-sidebar {
     float                  : right;
-    width                  : 1079px;
+    width                  : 1163px;
     height                 : 100px;
     margin                 : 0px;
-    margin-top             : 30px;
-    margin-right           : 30px;
     padding                : 0px;
     border-radius          : 0px 25px 0px 0px;
+    box-shadow             :10px 10px 40px 10px #edf2f7;
     background-color       : white;
 }
-
 .navigation-top-sidebar-title {
     float                  : left;
     margin-top             : 30px;
@@ -238,34 +242,113 @@ span {
     background-color       : #4c6fff ;
 }
 
+/*security -container*/
+
 .security-container {
     float                 : left;
     margin-left           : 0px;
 }
+
 .authentication-container {
-    width                  : 700px;
-    height                 : 254px;
+    width                  : 830px;
+    height                 : 283px;
     margin                 : 0px;
-    margin-top             : 4%;
-    margin-left            : 4%;
+    margin-top             : 22px;
+    margin-left            : 3%;
     padding                : 0px;
     border-radius          : 10px 10px 10px 10px;
     box-shadow             : 2px 2px 5px #dfe3e9;
     background-color       : white;
 }
 
-.password-container {
-    width                  : 700px;
-    height                 : 254px;
+.authentication-type {
     margin                 : 0px;
-    margin-top             : 5%;
-    margin-left            : 4%;
+    padding-top            : 15px;
+    padding-left           : 20px;
+    font-size              : 18px;
+    font-family            : Arial, Helvetica, sans-serif ;
+}
+
+.authentication-description-container {
+    margin                 : 0px;
+}
+
+.authentication-description {
+    float                  : left;
+    margin                 : 0px;
+    margin-bottom          : 30px;
+    padding-top            : 15px;
+    padding-left           : 20px;
+    font-size              : 14px;
+    font-family            : Arial, Helvetica, sans-serif ;
+    color                  : #516172 ;
+}
+
+.enable-button {
+    float                   : right;
+    width                   : 100px;
+    height                  : 40px;
+    margin-left             : 50px;
+    margin-right            : 20px;
+    padding-top             : 5px;
+    text-align              : center;
+    border                  : 0px;
+    border-radius           : 5px;
+    color                   : white;
+    background-color        : #4c6fff;
+}
+
+.authentication-separator {
+    width                : 780px;
+    margin-top           : 30px;
+    margin-bottom        : 0px;
+    border               : 1px solid #eff3f8;
+    color                : #eff3f8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.password-container {
+    width                  : 830px;
+    height                 : 283px;
+    margin                 : 0px;
+    margin-top             : 22px;
+    margin-left            : 3%;
     padding                : 0px;
     border-radius          : 10px 10px 0px 0px;
     box-shadow             : 2px 2px 5px #dfe3e9;
     background-color       : white;
 }
 
+/*right-sidebar*/
+
+.right-sidebar {
+    float                  : right;
+    width                  : 270px;
+    height                 : 500px;
+    margin                 : 0px;
+    margin-right           : 20px;
+    padding                : 0px;
+    margin-top             : 25px;
+    border-radius          : 10px 10px 10px 10px;
+    background-color       : white;
+}
 
 .logo-container {
     float                   : left;
@@ -282,24 +365,11 @@ span {
     color                    : white;
 }
 
-.right-sidebar {
-    float                  : right;
-    width                  : 270px;
-    height                 : 480px;
-    margin                 : 0px;
-    margin-right           : 60px;
-    padding                : 0px;
-    margin                 : 3% 60px 5% 2%;
-    border-radius          : 10px 10px 10px 10px;
-    background-color       : white;
-}
-
 .right-sidebar-title {
-    margin-bottom             : 0px;
+    margin-bottom             : 3px;
     margin-left               : 27px;
     padding-top               : 64px;
     font-family               : Arial, Helvetica, sans-serif;
-
 }
 
 .right-sidebar-description {
@@ -311,7 +381,7 @@ span {
 }
 
 .sign-out-button {
-    width               : 130px;
+    width               : 150px;
     height              : 30px;
     margin-top          : 18px;
     margin-left         : 27px;
@@ -331,14 +401,12 @@ span {
     color                : #eff3f8;
 }
 
-.divice-left-side {
+.type-of-device {
     float                  : left;
     margin-left            : 20px;
-
 }
 
-
-.divice-title {
+.divice-model {
     float                  : left;
     margin                 : 0px;
     margin-left            : 12px;
@@ -350,11 +418,10 @@ span {
 #ellipsis-icon {
     float                  : right;
     margin-right           : 26px;
-    font-size              : 14px;
-    
+    font-size              : 14px;  
 }
 
-.divice-description {
+.divice-location{
     margin                  : 0px;
     margin-top              : 27px;
     padding-left            : 42px;
@@ -366,7 +433,7 @@ span {
 .help-button {
     width                  : 230px;
     height                 : 30px;
-    margin-top             : 10px;
+    margin-top             : 32px;
     margin-left            : 20px;
     border                 : 0px;
     border-radius          : 6px 6px 6px 6px;
