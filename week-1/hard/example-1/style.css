@@ -1,7 +1,6 @@
 body {
     margin                 : 0px;
     padding                : 0px;
-   /* background             : #eaeff8;*/
 }
 
 ul {
@@ -164,7 +163,6 @@ span {
     margin-top         : 20px;
     margin-right       : 52px;
     padding            : 0px;
-  /*  opacity            : 0.7;*/
     border-radius      : 0px 25px 25px 0px;
     background-color   : #f7fafc;
 }
@@ -242,8 +240,6 @@ span {
     background-color       : #4c6fff ;
 }
 
-/*security -container*/
-
 .security-container {
     float                 : left;
     margin-left           : 0px;
@@ -276,12 +272,12 @@ span {
 .authentication-description {
     float                  : left;
     margin                 : 0px;
-    margin-bottom          : 30px;
+    margin-bottom          : 17px;
     padding-top            : 15px;
     padding-left           : 20px;
     font-size              : 14px;
     font-family            : Arial, Helvetica, sans-serif ;
-    color                  : #516172 ;
+    color                  : #516172;
 }
 
 .enable-button {
@@ -300,30 +296,55 @@ span {
 
 .authentication-separator {
     width                : 780px;
-    margin-top           : 30px;
+    margin-top           : 11px;
     margin-bottom        : 0px;
     border               : 1px solid #eff3f8;
     color                : #eff3f8;
 }
 
+.authentication-app {
+    margin              : 0px;
+    float               : left;
+}
+
+.authentication-option-title {
+    float               : left;
+    margin              : 0px;
+    margin-bottom       : 2px;
+    margin-left         : 23px;
+    font-size           : 14px;
+    font-family         : Arial, Helvetica, sans-serif;
+}
+
+.authentication-option-description {
+    margin-left         : 23px; 
+    margin-top          : 36px;
+    margin-bottom       : 6px;
+    font-size           : 12px;
+    font-family         : Arial, Helvetica, sans-serif;
+    color               : #516172 ;
+}
+
+.authentication-setup-button {
+    float                   : right;
+    width                   : 90px;
+    height                  : 34px;
+    margin-left             : 50px;
+    margin-right            : 20px;
+    padding-top             : 5px;   
+    border-radius           : 5px;
+    text-align              : center;
+    font-family             : Arial, Helvetica, sans-serif;
+    font-weight             : 600;
+    border                  : 1px solid #eff0f3;
+    background-color        : white;
+
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*security container*/
 .password-container {
     width                  : 830px;
     height                 : 283px;
@@ -335,8 +356,6 @@ span {
     box-shadow             : 2px 2px 5px #dfe3e9;
     background-color       : white;
 }
-
-/*right-sidebar*/
 
 .right-sidebar {
     float                  : right;
