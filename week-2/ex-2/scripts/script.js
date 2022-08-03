@@ -272,3 +272,25 @@ if(isSomethimes){
 if(isOfen){
   fiveNumber += 3;
 }
+
+var sixthNumber;
+var numbersSumFromOneToFive;
+var sixNumberToString;
+
+numbersSumFromOneToFive = firstNumber + secondNumber + 
+              thirdNumber + fourtNumber + fiveNumber;
+
+
+sixNumberToString = numbersSumFromOneToFive.
+                                  toString();
+
+
+var isSixNumberHaveMoreTwoDigits = numbersSumFromOneToFive >= 10;
+
+
+if(isSixNumberHaveMoreTwoDigits) {
+  sixthNumber = Number(sixNumberToString[0]) + 
+                Number(sixNumberToString[1]);
+}else {
+  sixthNumber = numbersSumFromOneToFive;
+}
