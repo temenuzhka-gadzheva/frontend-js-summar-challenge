@@ -218,3 +218,57 @@ if(isBodyMassIndexObese) {
 if(isBodyMassIndexVeryObese) {
   fourtNumber = 8;
 }
+
+var fiveNumber;
+
+var shoppingItem = prompt( "Моля изберете стока, която искате да закупите от списъка по-долу: " +
+                          "\n i.    плодове и зеленчуци" +
+                          "\n ii.   месо и месни продукти" + 
+                          "\n iii.  цигари и алкохол" +
+                          "\n iv.   млечни продукти" +
+                          "\n v.    захарни изделия." + 
+                          "\n Моля посочете само символа пред артикула" + 
+                          "\n Например i");
+
+var isItemFirst  = shoppingItem === "i";
+var isItemSecond = shoppingItem === "ii";
+var isItemThird  = shoppingItem === "iii";
+var isItemFourth = shoppingItem === "iv";
+var isItemFifth  = shoppingItem === "v";
+
+if(isItemFirst){
+  fiveNumber = 1;
+}
+if(isItemSecond){
+  fiveNumber = 2;
+}
+if(isItemThird){
+  fiveNumber = 3;
+}
+if(isItemFourth){
+  fiveNumber = 4;
+}
+if(isItemFifth){
+  fiveNumber = 5;
+}
+
+var howOfenBuy =  prompt( "Моля изберете колко често купувате продукта от предишното меню: " +
+                          "\n 1. рядко" +
+                          "\n 2. понякога" + 
+                          "\n 3. често" +
+                          "\n Моля посочете само числото" + 
+                          "\n Например 1");
+
+var isRarely      = howOfenBuy === "1";
+var isSomethimes  = howOfenBuy === "2";
+var isOfen        = howOfenBuy === "3";
+
+if(isRarely){
+  fiveNumber += 1;
+}
+if(isSomethimes){
+  fiveNumber += 2;
+}
+if(isOfen){
+  fiveNumber += 3;
+}
