@@ -122,3 +122,36 @@ if(isFirstNumberEqualNine) {
     }
   }
 }
+
+var isUserMinor = clientYears < 18;
+var isUserAdult = clientYears >= 18;
+var thirdNumber;
+
+if(isUserAdult) {
+  thirdNumber = 0;
+}
+
+if(isUserMinor){
+
+var motherBirthYear = 
+    prompt("Моля въведете годината на раждане на майка си !");
+var fatherBirthYear =
+    prompt("Моля въведете годината на раждане на баща си !");
+
+var motherBirthYearToString = motherBirthYear.toString();
+var fatherBirthYearToString = fatherBirthYear.toString();
+
+var isLastDigitsFromMotherAndFatherBirthYearEqual =
+                                              motherBirthYearToString[3] === 
+                                              fatherBirthYearToString[3]; 
+
+ if(isLastDigitsFromMotherAndFatherBirthYearEqual) {
+    thirdNumber = motherBirthYearToString[2];
+ } else {
+   thirdNumber = fatherBirthYearToString[3];
+ }
+}
+
+
+
+
