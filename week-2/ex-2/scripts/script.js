@@ -1,4 +1,3 @@
-
 const yearNow = 2022;
 const boundaryYear = 1965;
 const digitsCollection = [];
@@ -153,5 +152,69 @@ var isLastDigitsFromMotherAndFatherBirthYearEqual =
 }
 
 
+var clientHeightInCentimeters = 
+    prompt("Моля въведете височината си в сантиметри !");
+var clientWeightInKilograms =
+    prompt("Моля въведете теглото си в килограми !");
+
+var heightInMeters        = clientHeightInCentimeters / 100;
+var heightSquareInMeter  = heightInMeters * heightInMeters;
+var fourtNumber;
+var bodyMassIndex = (clientWeightInKilograms /
+                     heightSquareInMeter)
+                    .toFixed(2);
 
 
+var isBodyMassIndexUnderNorm   =  bodyMassIndex <  16;
+
+var isBodyMassIndexNormal      =  bodyMassIndex >= 16   && 
+                                  bodyMassIndex <= 16.99;
+
+var isBodyMassIndexAtletic     =  bodyMassIndex >= 17   && 
+                                  bodyMassIndex <= 18.49;
+
+var isBodyMassIndexOverAtletic =  bodyMassIndex >= 18.5 && 
+                                  bodyMassIndex <= 24.99;
+
+var isBodyMassIndexOverWeight  =  bodyMassIndex >= 25   && 
+                                  bodyMassIndex <= 29.99;
+
+var isBodyMassIndexFat         =  bodyMassIndex >= 30   && 
+                                  bodyMassIndex <= 34.99;
+
+var isBodyMassIndexObese       =  bodyMassIndex >= 35   && 
+                                  bodyMassIndex <= 39.99;
+
+var isBodyMassIndexVeryObese   =  bodyMassIndex >= 40;
+
+if(isBodyMassIndexUnderNorm) {
+  fourtNumber = 1;
+}
+
+if(isBodyMassIndexNormal) {
+  fourtNumber = 2;
+}
+
+if(isBodyMassIndexAtletic) {
+  fourtNumber = 3;
+}
+
+if(isBodyMassIndexOverAtletic) {
+  fourtNumber = 4;
+}
+
+if(isBodyMassIndexOverWeight) {
+  fourtNumber = 5;
+}
+
+if(isBodyMassIndexFat) {
+  fourtNumber = 6;
+}
+
+if(isBodyMassIndexObese) {
+  fourtNumber = 7;
+}
+
+if(isBodyMassIndexVeryObese) {
+  fourtNumber = 8;
+}
