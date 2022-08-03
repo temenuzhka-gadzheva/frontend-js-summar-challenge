@@ -294,3 +294,79 @@ if(isSixNumberHaveMoreTwoDigits) {
 }else {
   sixthNumber = numbersSumFromOneToFive;
 }
+
+var seventhNumber;
+
+var isFirstThirdAndFifithNumbersEven = firstNumber % 2 === 0 &&
+                                       thirdNumber % 2 === 0 &&
+                                       fifthNumber % 2 === 0 ;
+                        
+if(isFirstThirdAndFifithNumbersEven) {
+ seventhNumber = 0; 
+}
+
+var isFirstThirdAndFifithNumbersOdd  = firstNumber % 2 !== 0 &&
+                                       thirdNumber % 2 !== 0 &&
+                                       fifthNumber % 2 !== 0 ;
+
+if(isFirstThirdAndFifithNumbersOdd) {
+  seventhNumber = 1;
+} 
+
+var isFirstThirdOrFifithNumbersEven  = firstNumber % 2 === 0 ||
+                                       thirdNumber % 2 === 0 ||
+                                       fifthNumber % 2 === 0 ;
+
+if(isFirstThirdOrFifithNumbersEven) {
+  seventhNumber = 2;
+} 
+
+var isFristAndSecondDigitEven        = firstNumber  % 2 === 0 &&
+                                       secondNumber % 2 === 0 ;
+
+var isThirdAndFourthAndFifthDigitOdd =  thirdNumber % 2 !== 0 &&
+                                        fourtNumber % 2 !== 0 &&
+                                        fifthNumber % 2 !== 0 ;
+
+if(isFristAndSecondDigitEven || isThirdAndFourthAndFifthDigitOdd){
+  seventhNumber = 3;
+}
+
+var isAllDigitsEqual                 =  firstNumber  === secondNumber &&
+                                        secondNumber === thirdNumber  &&
+                                        thirdNumber  === fourtNumber  &&
+                                        fourtNumber  === fifthNumber  &&
+                                        fifthNumber  === sixthNumber;
+
+if(isAllDigitsEqual) {
+  seventhNumber = 4;
+}
+
+var isAllDigitsMoreThanPrevious      =  firstNumber  < secondNumber &&
+                                        secondNumber < thirdNumber  &&
+                                        thirdNumber  < fourtNumber  &&
+                                        fourtNumber  < fifthNumber  &&
+                                        fifthNumber  < sixthNumber;
+
+if(isAllDigitsMoreThanPrevious) {
+  seventhNumber = 5;
+}
+
+var generatedDigitsSum = numbersSumFromOneToFive + sixthNumber;
+var isSumFromGeneratedDigitsLessThanTen = numbersSumFromOneToFive < 10;
+
+if(isSumFromGeneratedDigitsLessThanTen) {
+  seventhNumber = 6;
+}
+
+var isSumFromGeneratedDigitsMoreThanTen = numbersSumFromOneToFive > 10;
+
+if(isSumFromGeneratedDigitsMoreThanTen) {
+  seventhNumber = 7;
+}
+
+var isSeventNumberUndefined = seventhNumber === undefined;
+
+if(isSeventNumberUndefined) {
+  seventhNumber = 9;
+}
