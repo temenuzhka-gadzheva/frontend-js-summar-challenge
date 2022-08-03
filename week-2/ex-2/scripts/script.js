@@ -10,6 +10,26 @@ function getSecondRandomNumber() {
   return Math.floor(Math.random() * 9) + 1;
 }
 
+function getOddRandomNumber() {
+  var result = Math.floor(Math.random() * 9) + 1;
+  var isResultOdd = result %  2 !== 0;
+  if(isResultOdd) {
+    return  result;
+  }else {
+    getOddRandomNumber();
+  }
+}
+
+function getEvenRandomNumber() {
+  var result = Math.floor(Math.random() * 9) + 1;
+  var isResultEven = result %  2 === 0;
+  if(isResultEven) {
+    return  result;
+  }else {
+    getOddRandomNumber();
+  }
+}
+
 var clientBirthYear = prompt("Моля въведете Вашата година на раждане !");
 var clientBirthYearResult = parseInt(clientBirthYear);
 var clientYears = yearNow - clientBirthYearResult;
@@ -369,4 +389,16 @@ var isSeventNumberUndefined = seventhNumber === undefined;
 
 if(isSeventNumberUndefined) {
   seventhNumber = 9;
+}
+
+var eightNumber;
+var isUserEatOftenSweet       = isItemFifth && isOfen;
+var isUserReralyEatVegetables = isItemFirst && isRarely; 
+
+if(isUserAdult && isBodyMassIndexOverWeight && isUserEatOftenSweet) {
+   eightNumber = getOddRandomNumber(); 
+}else if(isUserMinor && isBodyMassIndexAtletic && isUserReralyEatVegetables) {
+  eightNumber = getEvenRandomNumber();
+} else {
+  eightNumber = 0;
 }
