@@ -402,3 +402,41 @@ if(isUserAdult && isBodyMassIndexOverWeight && isUserEatOftenSweet) {
 } else {
   eightNumber = 0;
 }
+
+var ninthNumber;
+var collectionFromEvenPositionsNumbers = [
+                                          secondNumber, 
+                                          fourtNumber, 
+                                          sixthNumber, 
+                                          eightNumber
+                                        ];
+var collectionFromOddPositionsNumbers = [
+                                         firstNumber,
+                                         thirdNumber,
+                                         fifthNumber,
+                                         seventhNumber
+                                        ];
+
+var maxEvenNumber = Math.max(...collectionFromEvenPositionsNumbers);
+var maxOddNumber  = Math.max(...collectionFromOddPositionsNumbers);
+
+if(maxOddNumber > maxEvenNumber) {
+  ninthNumber = maxOddNumber + 1;
+  if(ninthNumber === 9) {
+    ninthNumber = 0;
+  }
+  if(ninthNumber === 0) {
+    ninthNumber = 1;
+  }
+} else if(maxOddNumber < maxEvenNumber) {
+   ninthNumber = maxEvenNumber - 1;
+   if(ninthNumber === 9) {
+    ninthNumber = 0;
+  }
+  if(ninthNumber === 0) {
+    ninthNumber = 1;
+  }
+} else {
+  ninthNumber = 0;
+}
+
