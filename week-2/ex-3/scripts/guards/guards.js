@@ -1,0 +1,3 @@
+const isOperationProcessable = () => {
+   return isOzoneMixerTurnOn;
+}
