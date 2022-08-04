@@ -9,5 +9,6 @@ const turnonOzoneMixer = () => {
 
     isOzoneMixerTurnOn = true;
     alert("Системата е включена");
+    return;
     
 }

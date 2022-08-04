@@ -1,5 +1,4 @@
 const hoursOfOxygen  = 168;
-const litersOfFuel   = 90;
 
 const manager = () => {
     
@@ -20,12 +19,21 @@ var moveRoboticArm;
 
 var command = prompt("Моля въведете команда !");
 
-if(command === "turnon"){
+if(command === "turnon") {
     turnonOzoneMixer();
+    return;
 }
 
-if(!isOperationProcessable()){
+if(!isOperationProcessable()) {
     return alert("Озонобъркачката не е включена - включете я преди да правите каквото и да е било");
+}
+
+if(unloadingArms(command)) {
+     return;
+}
+
+if(isRoboticArmLoaded()) {
+    return alert("Не може да включите, нова ръка ! Моля изключете предишната ръка !");
 }
 
 switch (command) {
@@ -34,8 +42,7 @@ switch (command) {
          loadRoboticArm(roboticArmName);
          break;
     case "unload":
-         roboticArmName = prompt("Моля въведете името на ръката, която искате да деактивирате !");
-         unloadRoboticArm(roboticArmName);
+         unloadRoboticArm();
          break;
     case "moveX":
          moveRoboticArm = prompt("Въведете посока на местене на ръката(като число) !");
