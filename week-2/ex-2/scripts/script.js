@@ -1,6 +1,7 @@
 const yearNow = 2022;
 const boundaryYear = 1965;
 const digitsCollection = [];
+const symbolsCollection = [];
 
 function getFirstRandomNumber() {
     return Math.floor(Math.random() * 7) + 1;
@@ -239,7 +240,7 @@ if(isBodyMassIndexVeryObese) {
   fourtNumber = 8;
 }
 
-var fiveNumber;
+var fifthNumber;
 
 var shoppingItem = prompt( "Моля изберете стока, която искате да закупите от списъка по-долу: " +
                           "\n i.    плодове и зеленчуци" +
@@ -257,19 +258,19 @@ var isItemFourth = shoppingItem === "iv";
 var isItemFifth  = shoppingItem === "v";
 
 if(isItemFirst){
-  fiveNumber = 1;
+  fifthNumber = 1;
 }
 if(isItemSecond){
-  fiveNumber = 2;
+  fifthNumber = 2;
 }
 if(isItemThird){
-  fiveNumber = 3;
+  fifthNumber = 3;
 }
 if(isItemFourth){
-  fiveNumber = 4;
+  fifthNumber = 4;
 }
 if(isItemFifth){
-  fiveNumber = 5;
+  fifthNumber = 5;
 }
 
 var howOfenBuy =  prompt( "Моля изберете колко често купувате продукта от предишното меню: " +
@@ -284,13 +285,13 @@ var isSomethimes  = howOfenBuy === "2";
 var isOfen        = howOfenBuy === "3";
 
 if(isRarely){
-  fiveNumber += 1;
+  fifthNumber += 1;
 }
 if(isSomethimes){
-  fiveNumber += 2;
+  fifthNumber += 2;
 }
 if(isOfen){
-  fiveNumber += 3;
+  fifthNumber += 3;
 }
 
 var sixthNumber;
@@ -298,7 +299,7 @@ var numbersSumFromOneToFive;
 var sixNumberToString;
 
 numbersSumFromOneToFive = firstNumber + secondNumber + 
-              thirdNumber + fourtNumber + fiveNumber;
+              thirdNumber + fourtNumber + fifthNumber;
 
 
 sixNumberToString = numbersSumFromOneToFive.
@@ -420,7 +421,7 @@ var collectionFromOddPositionsNumbers = [
 var maxEvenNumber = Math.max(...collectionFromEvenPositionsNumbers);
 var maxOddNumber  = Math.max(...collectionFromOddPositionsNumbers);
 
-if(maxOddNumber > maxEvenNumber) {
+if( maxOddNumber > maxEvenNumber) {
   ninthNumber = maxOddNumber + 1;
   if(ninthNumber === 9) {
     ninthNumber = 0;
@@ -440,3 +441,55 @@ if(maxOddNumber > maxEvenNumber) {
   ninthNumber = 0;
 }
 
+digitsCollection.push(firstNumber);
+digitsCollection.push(secondNumber);
+digitsCollection.push(thirdNumber);
+digitsCollection.push(fourtNumber);
+digitsCollection.push(fifthNumber);
+digitsCollection.push(sixthNumber);
+digitsCollection.push(seventhNumber);
+digitsCollection.push(eightNumber);
+digitsCollection.push(ninthNumber);
+
+digitsCollection.forEach(digit => {
+
+  switch (digit) {
+    case 0: 
+      digit = '*';
+      break;
+    case 1: 
+      digit = '!';
+      break;
+    case 2: 
+      digit = '@';
+      break;
+    case 3: 
+      digit = '#';
+      break;
+    case 4: 
+      digit = '$';
+      break;
+    case 5: 
+      digit = '%';
+      break;
+    case 6: 
+      digit = '^';
+      break;
+    case 7: 
+      digit = '&';
+      break;
+    case 8: 
+      digit = '/';
+      break;
+    case 9: 
+      digit = '+';
+      break;
+  }
+
+  symbolsCollection.push(digit);
+});
+
+var barCode  = symbolsCollection.join('');
+
+alert(`Вашият бар код е следният: ${barCode}`);
+ 
