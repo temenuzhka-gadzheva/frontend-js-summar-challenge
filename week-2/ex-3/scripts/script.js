@@ -45,9 +45,11 @@ var roboticArmName;
 var directionMoveRoboticArm;
 var displacementValueOfTheRobotArm;
 let isFinishActive = false;  
+let sealedOzoneHoles = 0;
 
 
 while(true) {
+
     if(countOfOzoneHoles === 0 && isFinishActive === true){
         isOzoneHolesFilled = true;
          alert("Мисията е изпълнена успешно !");

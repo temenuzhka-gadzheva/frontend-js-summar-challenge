@@ -7,14 +7,18 @@ const manager = () => {
 
     while(true){
 
-     if(isFinishActive === true) {
+    /* if(isFinishActive === true) {
           alert("First finish");
           return;
-      }
+      }*/
      if(command === "turnon") {
           turnonOzoneMixer();
           return;
       }
+     if(command === "status") {
+          remainingResources();
+          return;
+     }
       
       if(!isOperationProcessable()) {
           return alert("Озонобъркачката не е включена - включете я преди да правите каквото и да е било");
