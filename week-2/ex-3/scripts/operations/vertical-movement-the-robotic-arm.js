@@ -2,16 +2,16 @@ const moveVerticalArm = (directionMoveRoboticArm, displacementValueOfTheRobotArm
 
 switch (directionMoveRoboticArm) {
     case "up":
-        startPositionByX = displacementValueOfTheRobotArm;
-        hoursOfOxygen -= displacementValueOfTheRobotArm - 1;
-        console.log("Hours oxygen by Y: " + hoursOfOxygen);
-        console.log("Start position up: " + startPositionByX);
+        startPositionByY += Number(displacementValueOfTheRobotArm);
+        hoursOfOxygen -= Number(displacementValueOfTheRobotArm) - 1;
         break;
     case "down":
-        startPositionByY = -displacementValueOfTheRobotArm;
-        hoursOfOxygen -= displacementValueOfTheRobotArm - 1;
-        console.log("Hours oxygen by Y down: " + hoursOfOxygen);
-        console.log("Start position down: " + startPositionByY);
+        if(startPositionByY === 1) {
+            startPositionByY += -(Number(displacementValueOfTheRobotArm) + 1);
+        }else {
+            startPositionByY += -(Number(displacementValueOfTheRobotArm));
+        }
+        hoursOfOxygen -= Number(displacementValueOfTheRobotArm) - 1;
         break;
     default:
         alert("Невалидна команда")

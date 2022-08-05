@@ -1,8 +1,8 @@
-var isActiveRoboticArm = false;
-var isActiveRoboticArmA = false;
-var isActiveRoboticArmB = false;
-var isActiveRoboticArmC = false;
-var litersOfFuel        = 90;
+let isActiveRoboticArm  = false;
+let isActiveRoboticArmA = false;
+let isActiveRoboticArmB = false;
+let isActiveRoboticArmC = false;
+let litersOfFuel        = 90;
 
 const loadRoboticArm = (roboticArmName)  => {
 
@@ -12,7 +12,6 @@ const loadRoboticArm = (roboticArmName)  => {
             isActiveRoboticArm = true;
             isActiveRoboticArmA  = true;
             alert("Ръка A е включена успешно");
-            console.log("Arm A from loaded component: " + isActiveRoboticArmA);
             break;
         case "B":
             litersOfFuel--;

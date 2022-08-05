@@ -49,6 +49,14 @@ if(command === "moveX" || command === "moveY") {
      moveVerticalArm(directionMoveRoboticArm,displacementValueOfTheRobotArm);
      return;
 }
+if(command === "identify") {
+     identifyOzoneHole();
+     return;
+}
+if(command === "cut") {
+     cutOzoneHole();
+     return;
+}
 
 if(isRoboticArmLoaded()) {
      return alert("Не може да включите, нова ръка ! Моля изключете предишната ръка !");
@@ -61,12 +69,7 @@ if(command === "load") {
 }
 
 switch (command) {
-    case "identify":
-         identifyOzoneHole();
-         break;
-    case "cut":
-         cutOzoneHole();
-         break;
+     
     case "fill":
           fillOzoneHole(randomNumber);
           break;
