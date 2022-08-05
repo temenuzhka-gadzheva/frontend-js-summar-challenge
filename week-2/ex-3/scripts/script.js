@@ -65,7 +65,7 @@ switch (command) {
          identifyOzoneHole();
          break;
     case "cut":
-         cutOzoneHole(randomNumber);
+         cutOzoneHole();
          break;
     case "fill":
           fillOzoneHole(randomNumber);
