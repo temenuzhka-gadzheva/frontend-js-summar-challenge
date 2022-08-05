@@ -49,12 +49,25 @@ if(command === "moveX" || command === "moveY") {
      moveVerticalArm(directionMoveRoboticArm,displacementValueOfTheRobotArm);
      return;
 }
+
 if(command === "identify") {
      identifyOzoneHole();
      return;
 }
+
 if(command === "cut") {
+     if(isAlreadyIdentificateOzoneHole() === false) {
+          return alert("Все още няма идентифицирана озонова дупка. Моля, индетифицирайте !");
+     }     
      cutOzoneHole();
+     return;
+}
+
+if(command === "fill") {
+     if(isAlreadyActivateCutOzoneHole() === false) {
+          return alert("Все още озоновата дупка не е изрязана. Моля, изрежете я !");
+     }
+     fillOzoneHole();
      return;
 }
 
@@ -70,9 +83,6 @@ if(command === "load") {
 
 switch (command) {
      
-    case "fill":
-          fillOzoneHole(randomNumber);
-          break;
     case "finish":
           missionFinish();
           break;

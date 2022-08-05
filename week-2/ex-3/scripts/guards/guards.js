@@ -39,4 +39,15 @@ const unloadingArms = (command) => {
   }
 }
 
+const isAlreadyIdentificateOzoneHole = () => {
+ return isIdentifyHole;
+}
+
+const isAlreadyActivateCutOzoneHole = () => {
+return isCuttingActive;
+}
+
+const isAlreadyActivateFillOzoneHole = () => {
+   return isActivateFill;
+}
 
