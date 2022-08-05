@@ -5,7 +5,7 @@ let isOxygenSufficient = true;
 
 const cutOzoneHole = () => {
 
-   randomNumberForCut = randomNumberFromCutAndFillOperations();
+   randomNumberForCut = randomNumberForCutAndFillOperations();
    isCuttingActive = true;
    userAssumptionForCutOperation = prompt("Генерирах число от 1 до 20 познай го - за да отрежа дупката !");
 
@@ -15,6 +15,7 @@ const cutOzoneHole = () => {
       isOxygenSufficient = false;
       break;
     }
+    console.log("Rndom number for cut: " + randomNumberForCut);
      alert(`Не успешен опит пробвай пак ${userAssumptionForCutOperation}`);
      hoursOfOxygen--;
      userAssumptionForCutOperation = prompt("Генерирах число от 1 до 20 познай го - за да отрежа дупката !");

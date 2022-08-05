@@ -3,7 +3,7 @@ let isIdentifyHole = false;
 
 
 const identifyOzoneHole = () => {
-   size = randomNumberBySizeOfHole();
+   size = randomNumberForSizeOfHole();
    isIdentifyHole = true;
    alert("Дупката е идентифицирана !");
    

@@ -1,5 +1,17 @@
-const manager = () => {
-    
+let countOfOzoneHoles = prompt("Колко озонови дупки искате да запълните ?");
+console.log("Count of the ozone hole: " + countOfOzoneHoles);
+let ozoneHoleCoordinateX = randomNumberForTheCoordinatesOfTheOzoneHole();
+let ozoneHoleCoordinateY = randomNumberForTheCoordinatesOfTheOzoneHole();
+
+
+if(countOfOzoneHoles > 1){
+    alert(`Озоноеата дупка  се намира на X - ${ozoneHoleCoordinateX} и Y - ${ozoneHoleCoordinateY}`);
+    countOfOzoneHoles--;
+}else if(countOfOzoneHoles === 1) {
+    alert(`Озоноеата дупка  се намира на X - ${ozoneHoleCoordinateX} и Y - ${ozoneHoleCoordinateY}`);
+    countOfOzoneHoles--;
+}
+
 console.log("Меню с команди"                                     );
 console.log("turnon. Включване на озонобъркачката"               );
 console.log("load. Включване на роботска ръка"                   );
@@ -15,86 +27,25 @@ console.log("status. Статус на мисията"                          
 var roboticArmName;
 var directionMoveRoboticArm;
 var displacementValueOfTheRobotArm;
+let isFinishActive = false;  
 
-var command = prompt("Моля въведете команда !");
 
-if(command === "turnon") {
-    turnonOzoneMixer();
-    return;
-}
+while(true) {
+    if(isFinishActive === true) {
+      ozoneHoleCoordinateX = randomNumberForTheCoordinatesOfTheOzoneHole();
+      ozoneHoleCoordinateY = randomNumberForTheCoordinatesOfTheOzoneHole();
+      isFinishActive = false;
 
-if(!isOperationProcessable()) {
-    return alert("Озонобъркачката не е включена - включете я преди да правите каквото и да е било");
-}
-
-if(command === "unload") {
-     unloadRoboticArm();
-     return;
-}
-
-if(command === "moveX" || command === "moveY") {
-
-     if(isActiveRoboticArm === false) { 
-          return alert("Моля активирайте ръка преди да я местите !");
-     }
-
-     directionMoveRoboticArm = prompt("Въведете посока на местене на ръката !");
-     displacementValueOfTheRobotArm = prompt("Въведете позицията, на която искате да преместите ръката !");
-     
-     if(command === "moveX") {
-
-          moveHorizontalArm(directionMoveRoboticArm,displacementValueOfTheRobotArm);
-          return;
-     }
-     moveVerticalArm(directionMoveRoboticArm,displacementValueOfTheRobotArm);
-     return;
-}
-
-if(command === "identify") {
-     identifyOzoneHole();
-     return;
-}
-
-if(command === "cut") {
-     if(isAlreadyIdentificateOzoneHole() === false) {
-          return alert("Все още няма идентифицирана озонова дупка. Моля, индетифицирайте !");
-     }     
-     cutOzoneHole();
-     return;
-}
-
-if(command === "fill") {
-     if(isAlreadyActivateCutOzoneHole() === false) {
-          return alert("Все още озоновата дупка не е изрязана. Моля, изрежете я !");
-     }
-     fillOzoneHole();
-     return;
-}
-
-if(isRoboticArmLoaded()) {
-     return alert("Не може да включите, нова ръка ! Моля изключете предишната ръка !");
-}
-
-if(command === "load") {
-     roboticArmName = prompt("Моля въведете името на ръката, която искате да активирате !");
-     loadRoboticArm(roboticArmName);
-     return;
-}
-
-switch (command) {
-     
-    case "finish":
-          missionFinish();
-          break;
-    case "status": 
-          missionStatus();
-          break;
-    default:
-        alert("Командата, която сте въвели е невалидна !");
+      if(countOfOzoneHoles > 1){
+          alert(`Озоноеата дупка  се намира на X - ${ozoneHoleCoordinateX} и Y - ${ozoneHoleCoordinateY}`);
+          countOfOzoneHoles--;
+      } else if(countOfOzoneHoles === 1) {
+        alert(`Озоноеата дупка  се намира на X - ${ozoneHoleCoordinateX} и Y - ${ozoneHoleCoordinateY}`);
+        countOfOzoneHoles--;
+    } else {
+        alert("Ok");
         break;
-}
-}
-
-while(true){
+      }
+   }
     manager();
 }
