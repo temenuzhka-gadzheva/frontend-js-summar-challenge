@@ -1,5 +1,3 @@
-const hoursOfOxygen  = 168;
-
 const manager = () => {
     
 console.log("Меню с команди"                                     );
@@ -15,7 +13,8 @@ console.log("finish. Запечатване на запълнената дупк
 console.log("status. Статус на мисията"                          );
 
 var roboticArmName;
-var moveRoboticArm;
+var directionMoveRoboticArm;
+var displacementValueOfTheRobotArm;
 
 var command = prompt("Моля въведете команда !");
 
@@ -28,30 +27,40 @@ if(!isOperationProcessable()) {
     return alert("Озонобъркачката не е включена - включете я преди да правите каквото и да е било");
 }
 
-if(unloadingArms(command)) {
+if(command === "unload") {
+     unloadRoboticArm();
+     return;
+}
+
+if(command === "moveX" || command === "moveY") {
+
+     if(isActiveRoboticArm === false) { 
+          return alert("Моля активирайте ръка преди да я местите !");
+     }
+
+     directionMoveRoboticArm = prompt("Въведете посока на местене на ръката !");
+     displacementValueOfTheRobotArm = prompt("Въведете позицията, на която искате да преместите ръката !");
+     
+     if(command === "moveX") {
+
+          moveHorizontalArm(directionMoveRoboticArm,displacementValueOfTheRobotArm);
+          return;
+     }
+     moveVerticalArm(directionMoveRoboticArm,displacementValueOfTheRobotArm);
      return;
 }
 
 if(isRoboticArmLoaded()) {
-    return alert("Не може да включите, нова ръка ! Моля изключете предишната ръка !");
+     return alert("Не може да включите, нова ръка ! Моля изключете предишната ръка !");
+}
+
+if(command === "load") {
+     roboticArmName = prompt("Моля въведете името на ръката, която искате да активирате !");
+     loadRoboticArm(roboticArmName);
+     return;
 }
 
 switch (command) {
-    case "load":
-         roboticArmName = prompt("Моля въведете името на ръката, която искате да активирате !");
-         loadRoboticArm(roboticArmName);
-         break;
-    case "unload":
-         unloadRoboticArm();
-         break;
-    case "moveX":
-         moveRoboticArm = prompt("Въведете посока на местене на ръката(като число) !");
-         moveHorizontalArm();
-         break;
-    case "moveY":
-         moveRoboticArm = prompt("Въведете посока на местене на ръката(като число) !");
-         moveVerticalArm();
-         break;
     case "identify":
          identifyOzoneHole();
          break;

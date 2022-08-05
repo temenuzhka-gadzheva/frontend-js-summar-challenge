@@ -2,7 +2,7 @@ var isActiveRoboticArm = false;
 var isActiveRoboticArmA = false;
 var isActiveRoboticArmB = false;
 var isActiveRoboticArmC = false;
-var litersOfFuel   = 90;
+var litersOfFuel        = 90;
 
 const loadRoboticArm = (roboticArmName)  => {
 
