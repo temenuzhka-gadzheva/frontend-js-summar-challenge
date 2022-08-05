@@ -2,6 +2,9 @@ let countOfOzoneHoles = prompt("Колко озонови дупки искат�
 console.log("Count of the ozone hole: " + countOfOzoneHoles);
 let ozoneHoleCoordinateX = randomNumberForTheCoordinatesOfTheOzoneHole();
 let ozoneHoleCoordinateY = randomNumberForTheCoordinatesOfTheOzoneHole();
+let isEnoughtFuel = true;
+let isEnoughtOxygen = true;
+let isOzoneHolesFilled = false;
 
 
 if(countOfOzoneHoles > 1){
@@ -11,6 +14,20 @@ if(countOfOzoneHoles > 1){
     alert(`Озоноеата дупка  се намира на X - ${ozoneHoleCoordinateX} и Y - ${ozoneHoleCoordinateY}`);
     countOfOzoneHoles--;
 }
+
+if (hoursOfOxygen <= 24){
+      isEnoughtOxygen = false;
+      alert("Достигнахме критичен кислороден минимум !");
+}
+if(litersOfFuel <= 0){
+      isEnoughtFuel = false;
+      alert("Няма гориво в резервоара, моля презареди");
+ }
+
+ if(countOfOzoneHoles === 0 && isFinishActive === true){
+    isOzoneHolesFilled = true;
+     alert("Мисията е изпълнена успешно !");
+  } 
 
 console.log("Меню с команди"                                     );
 console.log("turnon. Включване на озонобъркачката"               );
@@ -31,6 +48,21 @@ let isFinishActive = false;
 
 
 while(true) {
+    if(countOfOzoneHoles === 0 && isFinishActive === true){
+        isOzoneHolesFilled = true;
+         alert("Мисията е изпълнена успешно !");
+         break;
+      } 
+    if (hoursOfOxygen <= 24){
+          isEnoughtOxygen = false;
+          alert("Достигнахме критичен кислороден минимум !");
+          break;
+    }
+    if(litersOfFuel <= 0){
+          isEnoughtFuel = false;
+          alert("Няма гориво в резервоара, моля презареди");
+          break;
+     }
     if(isFinishActive === true) {
       ozoneHoleCoordinateX = randomNumberForTheCoordinatesOfTheOzoneHole();
       ozoneHoleCoordinateY = randomNumberForTheCoordinatesOfTheOzoneHole();
@@ -42,9 +74,13 @@ while(true) {
       } else if(countOfOzoneHoles === 1) {
         alert(`Озоноеата дупка  се намира на X - ${ozoneHoleCoordinateX} и Y - ${ozoneHoleCoordinateY}`);
         countOfOzoneHoles--;
-    } else {
+    } else if(countOfOzoneHoles === 0){
+        isOzoneHolesFilled = true;
         alert("Ok");
-        break;
+      } else if (hoursOfOxygen <= 24){
+          isEnoughtOxygen = false;
+      } else if(litersOfFuel <= 0){
+          isEnoughtFuel = false;
       }
    }
     manager();
