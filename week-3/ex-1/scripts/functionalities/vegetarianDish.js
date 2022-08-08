@@ -1,0 +1,3 @@
+const vegetarianDish = (data) => {
+
+}

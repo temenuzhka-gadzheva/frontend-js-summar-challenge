@@ -17,16 +17,54 @@ const staffAndKitchenRequiredQuestions = () => {
     let closeRestaurant                  = prompt("В колко часа затваряте?");
 
     let additionalQuestionsAnswer        = prompt("Желаете ли да отговаряте на опционални въпроси? (Y/N)");
-    let isAnswerYes = additionalQuestionsAnswer.toUpperCase() === "Y";
-
+    let isAnswerYes                      = additionalQuestionsAnswer.toUpperCase() === "Y";
+    let data                             = {};
+    
     if(isAnswerYes) {
      
-        let haveFridgeInTheKitchen = prompt("Разполагате ли с хладилник? (Y/N)");
-        let haveGasStoveInTheKitchen = prompt("Разполагате ли с газов котлон? (Y/N)");
-        let haveConvectionOvenInTheKitchen = prompt("Разполагате ли с конвектомат? (Y/N)");
+        let haveFridgeInTheKitchen        = prompt("Разполагате ли с хладилник? (Y/N)");
+        let haveGasStoveInTheKitchen      = prompt("Разполагате ли с газов котлон? (Y/N)");
+        let haveConvectionOvenInTheKitchen= prompt("Разполагате ли с конвектомат? (Y/N)");
         let haveElectricGrillInTheKitchen = prompt("Разполагате ли с електрическа скара? (Y/N)");
-        let haveHoodInTheKitchen = prompt("Разполагате ли с аспиратор? (Y/N)");
+        let haveHoodInTheKitchen          = prompt("Разполагате ли с аспиратор? (Y/N)");
+       
+        data = {countOfPans,
+                countOfPots,
+                kitchenWidthInCentimeters,
+                kitchenLenghtInCentimeters,
+                kitchenHeightInCentimeters,
+                chefName,countOfCooks,
+                countOfWaiters,
+                nameOfTheResponsibleForTheSauces,
+                minThemperatureInTheKitchen,
+                maxTemperatureInTheKitchen,
+                moneyInBankAccount,
+                dailyTurnover,
+                openRestaurant,
+                closeRestaurant,
+                haveFridgeInTheKitchen, 
+                haveGasStoveInTheKitchen,
+                haveConvectionOvenInTheKitchen,
+                haveElectricGrillInTheKitchen,
+                haveHoodInTheKitchen};
+    } else {
+          
+    data = {countOfPans,
+            countOfPots,
+            kitchenWidthInCentimeters,
+            kitchenLenghtInCentimeters,
+            kitchenHeightInCentimeters,
+            chefName,countOfCooks,
+            countOfWaiters,
+            nameOfTheResponsibleForTheSauces,
+            minThemperatureInTheKitchen,
+            maxTemperatureInTheKitchen,
+            moneyInBankAccount,
+            dailyTurnover,
+            openRestaurant,
+            closeRestaurant};
     }
 
     alert("Всички въпроси са зададени.");
+    return data;
 };

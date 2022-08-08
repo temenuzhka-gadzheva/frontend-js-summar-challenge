@@ -1,4 +1,6 @@
 while (true) {
-    staffAndKitchenRequiredQuestions();
+
+   var data = staffAndKitchenRequiredQuestions();
+              dishesChoise(data);
     break;
 }
