@@ -19,7 +19,7 @@ const staffAndKitchenRequiredQuestions = () => {
     let additionalQuestionsAnswer        = prompt("Желаете ли да отговаряте на опционални въпроси? (Y/N)");
     let isAnswerYes                      = additionalQuestionsAnswer.toUpperCase() === "Y";
     let data                             = {};
-    
+    let isAnswerOfOptionQuestion         = false;
     if(isAnswerYes) {
      
         let haveFridgeInTheKitchen        = prompt("Разполагате ли с хладилник? (Y/N)");
@@ -27,7 +27,7 @@ const staffAndKitchenRequiredQuestions = () => {
         let haveConvectionOvenInTheKitchen= prompt("Разполагате ли с конвектомат? (Y/N)");
         let haveElectricGrillInTheKitchen = prompt("Разполагате ли с електрическа скара? (Y/N)");
         let haveHoodInTheKitchen          = prompt("Разполагате ли с аспиратор? (Y/N)");
-       
+            isAnswerOfOptionQuestion      = true;
         data = {countOfPans,
                 countOfPots,
                 kitchenWidthInCentimeters,
@@ -46,7 +46,8 @@ const staffAndKitchenRequiredQuestions = () => {
                 haveGasStoveInTheKitchen,
                 haveConvectionOvenInTheKitchen,
                 haveElectricGrillInTheKitchen,
-                haveHoodInTheKitchen};
+                haveHoodInTheKitchen,
+                isAnswerOfOptionQuestion};
     } else {
           
     data = {countOfPans,
