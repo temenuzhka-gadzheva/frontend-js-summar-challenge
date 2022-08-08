@@ -5,7 +5,7 @@ const meatDish = (data) => {
                                                              "\n (2) средна - 750 грама"          +
                                                              "\n (3) голяма - 950 грама");
                         
-    let roastingMeatChoise                          = prompt(" Каква разновидност на изпичане желаете?" +
+    let roastingMeatChoice                          = prompt(" Каква разновидност на изпичане желаете?" +
                                                              "\n (1) RARE"                              +
                                                              "\n (2) MEDIUM"                            +
                                                              "\n (3) WELL DONE");
@@ -54,9 +54,9 @@ const meatDish = (data) => {
     let isConditionsForWellDoneCorrect              = isOneConditionFirstPartForWellDoneCorrect                         &&
                                                       isOneConditionSecondPartForWellDoneCorrect;
 
-    let isRoastingMeatRARE                          = roastingMeatChoise                                    === "1";
-    let isRoastingMeatMEDIUM                        = roastingMeatChoise                                    === "2";
-    let isRoastingMeatWELLDONE                      = roastingMeatChoise                                    === "3";
+    let isRoastingMeatRARE                          = roastingMeatChoice                                    === "1";
+    let isRoastingMeatMEDIUM                        = roastingMeatChoice                                    === "2";
+    let isRoastingMeatWELLDONE                      = roastingMeatChoice                                    === "3";
 
 
     let isOrderCorrect                              = (isAllConditionsForRareCorrect  && isRoastingMeatRARE     )      || 

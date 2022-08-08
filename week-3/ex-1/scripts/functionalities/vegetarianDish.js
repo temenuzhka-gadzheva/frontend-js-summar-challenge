@@ -1,13 +1,13 @@
 const vegetarianDish = (data) => {
 
-    let vegertarianChoise                           =  prompt("Какво ястие от секция вегетарианско предпочитате?"  +
+    let vegertarianChoice                           =  prompt("Какво ястие от секция вегетарианско предпочитате?"  +
                                                               "\n ВЕГЕТАРИАНСКО"                                   +
                                                               "\n ВЕГАНСКО"                                        +
                                                               "\n ПЕСКАТЕРИАНСКО");
 
-    let vegetarian                                  = vegertarianChoise.toUpperCase()                      === "ВЕГЕТАРИАНСКО";
-    let vegan                                       = vegertarianChoise.toUpperCase()                      === "ВЕГАНСКО";
-    let peskaterian                                 = vegertarianChoise.toUpperCase()                      === "ПЕСКАТЕРИАНСКО";
+    let vegetarian                                  = vegertarianChoice.toUpperCase()                      === "ВЕГЕТАРИАНСКО";
+    let vegan                                       = vegertarianChoice.toUpperCase()                      === "ВЕГАНСКО";
+    let peskaterian                                 = vegertarianChoice.toUpperCase()                      === "ПЕСКАТЕРИАНСКО";
 
     let isHaveNotConvectionOvenInTheKitchen         =  data.haveConvectionOvenInTheKitchen.toUpperCase()   === "N";
     let isHaveNotElectricGrillInTheKitchen          =  data.haveElectricGrillInTheKitchen.toUpperCase()    === "N";

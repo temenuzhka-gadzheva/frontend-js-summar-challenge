@@ -1,18 +1,21 @@
 const dishesChoise = (data) => {
 
-  let dishChoise         = prompt("Какво ще хапвате? "   +
+  let dishChoice         = prompt("Какво ще хапвате? "   +
                               "\n (1) Месо"              +
                               "\n (2) Вегетарианско"     +
                               "\n (3) Десерт");
     
-  let isDishMeat         = dishChoise === "1";
-  let isDishVegetarian   = dishChoise === "2";
-  let isDishDessert      = dishChoise === "3";
+  let isDishMeat         = dishChoice === "1";
+  let isDishVegetarian   = dishChoice === "2";
+  let isDishDessert      = dishChoice === "3";
 
   if(isDishMeat) {
     meatDish(data);
   }
   if(isDishVegetarian) {
     vegetarianDish(data);
+  }
+  if(isDishDessert) {
+    dessertDish(data);
   }
 }
