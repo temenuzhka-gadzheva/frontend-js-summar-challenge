@@ -18,4 +18,5 @@ const dishesChoise = (data) => {
   if(isDishDessert) {
     dessertDish(data);
   }
+  orderProcessing();
 }
