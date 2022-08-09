@@ -1,5 +1,5 @@
 let isBigLetter   = false;
-let data          = {};
+let smallLetters  = {};
 
 const smallLetter = (letter) => {
 
@@ -59,7 +59,7 @@ const smallLetter = (letter) => {
         isBigLetter = true;
     }
 
-    data = { letter, isBigLetter };
+    smallLetters = { letter, isBigLetter };
 
-    return data;
+    return smallLetters;
 };

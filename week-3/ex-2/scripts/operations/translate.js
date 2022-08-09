@@ -1,28 +1,30 @@
-let translatedResult     = [];
 let isEvenPosition;
-let isLetterBig          = false;    
+let isLetterBig = false;
 let translatedLetter;
+let pointsData;
+let pointsCount;
+let firstPointIndex;
+let symbol;
+let translatedInterval;
+let translatedPoint;
+let firstSentanceTranslate;
+let nextSentanceTranslate;
+let translatedQuestionMark;
+let moreThanOneCapitalLetter = false;
 
 
 const translate = (inputAsCharArray) => {
 
-    for (let i = 0; i < inputAsCharArray.length; i++) {
-        let letter = inputAsCharArray[i];
-        
-        isEvenPosition = i % 2 === 0;
-        data           = smallLetter(letter);
-        isLetterBig    = data.isBigLetter;
+    pointsData = areThereMoreSentences(inputAsCharArray);
+    pointsCount = pointsData.numberOfPoints;
+    firstPointIndex = pointsData.pointsIndex[0];
+    nextPointIndex = pointsData.pointsIndex[1];
+    firstSentanceTranslate = firstSentance(inputAsCharArray, firstPointIndex);
 
-        if (isLetterBig) {
-            translatedLetter = capitalLetter(letter, isEvenPosition);
-            isBigLetter      = false;
-        } else {
-            translatedLetter = data.letter;
-            isBigLetter      = false;
-        }
-
-        translatedResult.push(translatedLetter);
+    if (pointsCount > 1) {
+        return nextSentanceTranslate = nextSentance(inputAsCharArray, firstPointIndex, nextPointIndex);
+    } else {
+        return firstSentanceTranslate;
     }
 
-    return translatedResult.join("");
 };

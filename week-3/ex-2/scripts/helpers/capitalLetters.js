@@ -1,3 +1,4 @@
+
 const capitalLetter = (letter, isEvenPosition) => {
 
     if (letter === 'A') {
