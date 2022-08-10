@@ -1,5 +1,6 @@
 let input = prompt("Моля въведете текст за превод на латиница.");
-let inputAsCharArray = input.split("");
-let result = translate(inputAsCharArray);
+let inputArray = input.split("");
 
-console.log("Translated word: " + result);
+let translatedInput = translate(inputArray);
+
+console.log("TranslatedInput: " + translatedInput);

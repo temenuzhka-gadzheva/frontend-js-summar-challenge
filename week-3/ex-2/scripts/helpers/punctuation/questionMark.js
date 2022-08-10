@@ -1,3 +1,4 @@
 const questionMark = (symbol) => {
-   return symbol = "$$$";
-}
+    return symbol = "$$$";
+ }
+ 
