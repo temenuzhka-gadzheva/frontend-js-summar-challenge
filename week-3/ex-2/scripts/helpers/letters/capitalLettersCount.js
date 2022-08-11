@@ -1,32 +1,36 @@
+let index;
 let isHaveMoreCapitalLetters = false;
-let capitalLettersCount = 0;
-let capitalLettersLocation = [];
+let capitalLettersCount      = 0;
+let capitalLettersLocation   = [];
 
 const moreCapitalLetters = (inputArray) => {
+
     let element;
+    let itterationsCounter = 0;
+
     for (let i = 0; i < inputArray.length; i++) {
+
         element = inputArray[i];
+        index = i;
 
-        if (element.match(/^ *$/) !== null) { continue; }
-        console.log("Element: " + element);
+        if (element.match(/^ *$/) !== null)  continue;
 
-        console.log("Capital function: " + baseCapitalLetter(element).isCapitalLetter === true);
         isElementBig = baseCapitalLetter(element).isCapitalLetter === true;
-        console.log("Is element capital: " + isElementBig);
 
         if (isElementBig === true) {
-            capitalLettersCount++;
-            capitalLettersLocation.push(i);
+            [capitalLettersLocation, 
+             capitalLettersCount,
+             isHaveAbbreviation] = abbreviation(capitalLettersLocation,
+                                                itterationsCounter,
+                                                capitalLettersCount,
+                                                index);
         }
+        itterationsCounter++;
     }
 
-    console.log("Capital letters location: " + capitalLettersLocation);
     if (capitalLettersCount > 1) {
-        if (isHaveAbbreviation === false) {
-            abbreviation(inputArray, capitalLettersLocation);
-        }
         isHaveMoreCapitalLetters = true;
     }
 
-    return { isHaveMoreCapitalLetters, capitalLettersCount, capitalLettersLocation };
+    return { isHaveMoreCapitalLetters, capitalLettersCount, capitalLettersLocation, isHaveAbbreviation };
 };

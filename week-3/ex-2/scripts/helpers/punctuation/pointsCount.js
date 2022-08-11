@@ -1,9 +1,10 @@
 let isHaveMorePoints = false;
-let pointsCount = 0;
-let pointsLocation = [];
+let pointsCount      = 0;
+let pointsLocation   = [];
 
 const morePoints = (inputArray) => {
     let element;
+    
     for (let i = 0; i < inputArray.length; i++) {
         element = inputArray[i];
 
@@ -17,5 +18,5 @@ const morePoints = (inputArray) => {
         isHaveMorePoints = true;
     }
 
-    return { isHaveMorePoints, pointsCount, pointsLocation };
+    return [ isHaveMorePoints, pointsCount, pointsLocation ];
 };

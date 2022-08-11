@@ -1,21 +1,20 @@
-let translatedSymbol;
-let isEvenPosition;
-let translatedSentence = [];
-let isElementBig;
-
-const firstSentence = (inputArray, firstPointLocation, capitalLettersLocation, pointsCount) => {
+let capitalLetterCounter = 1;
+const nextSentenceTranslation = (inputArray, firstPointLocation, nextPointLocation, capitalLettersLocation) => {
 
     let element;
     let isCapitalLettersLocaitonContainsIndex;
     let isCapitalLettersLoctionLengthMoreThanOne;
 
-    for (let i = 0; i < firstPointLocation; i++) {
+    for (let i = firstPointLocation; i <= nextPointLocation; i++) {
 
         isEvenPosition = i % 2 === 0;
         element        = inputArray[i];
 
         if (element.match(/^ *$/) !== null) {
             translatedSymbol = interval(element, isEvenPosition);
+            translatedSentence.push(translatedSymbol);
+        } else if (element === ".") {
+            translatedSymbol = point(element);
             translatedSentence.push(translatedSymbol);
         } else if (element === "?") {
             translatedSymbol = questionMark(element);
@@ -32,14 +31,13 @@ const firstSentence = (inputArray, firstPointLocation, capitalLettersLocation, p
                 if (isCapitalLettersLoctionLengthMoreThanOne && isCapitalLettersLocaitonContainsIndex) {
                     translatedSymbol = element;
                     translatedSentence.push(translatedSymbol);
-                } else {
 
+                } else {
                     translatedSymbol = capitalLetter(element, isEvenPosition).symbol;
                     translatedSentence.push(translatedSymbol);
-                     if(pointsCount > 1){
-                        translatedSymbol = `[(${capitalLetterCounter})]`;
-                        translatedSentence.push(translatedSymbol);
-                     }
+
+                    translatedSymbol = `[(${capitalLetterCounter})]`;
+                    translatedSentence.push(translatedSymbol);
 
                     capitalLetterCounter++;
                 }
@@ -51,4 +49,4 @@ const firstSentence = (inputArray, firstPointLocation, capitalLettersLocation, p
     }
 
     return translatedSentence.join("");
-};
+}

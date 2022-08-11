@@ -6,24 +6,28 @@ let firstSentenceTranslation;
 
 const translate = (inputArray) => {
 
-    pointsData = morePoints(inputArray);
-    pointsCount = pointsData.pointsCount;
-    firstPointLocation = pointsData.pointsLocation[0];
-    nextPointLocation = pointsData.pointsLocation[1];
+    [isHaveMorePoints, pointsCount, pointsLocation] = morePoints(inputArray);
 
-    capitalLettersData = moreCapitalLetters(inputArray);
+    firstPointLocation  = pointsLocation[0];
+    nextPointLocation   = pointsLocation[1];
+    capitalLettersData  = moreCapitalLetters(inputArray);
     capitalLettersCount = capitalLettersData.capitalLettersCount;
+    isHaveAbbreviation  = capitalLettersData.isHaveAbbreviation;
 
-    /*console.log("Capital letters: " + capitalLettersCount);*/
-
-
-    firstSentenceTranslation = firstSentence(inputArray, firstPointLocation);
+    firstSentenceTranslation = firstSentence(inputArray, firstPointLocation, capitalLettersData.capitalLettersLocation, pointsCount);
 
     if (pointsCount > 1) {
-        return "Have more sentences!!!";
+        return nextSentenceTranslation(inputArray, 
+                                       firstPointLocation, 
+                                       nextPointLocation, 
+                                       capitalLettersData.capitalLettersLocation, 
+                                       capitalLettersCount)
     } else if (pointsCount === 0) {
-        firstPointLocation = inputArray.length + 1;
-        return firstSentence(inputArray, firstPointLocation);
+        firstPointLocation = inputArray.length;
+
+        return firstSentence(inputArray, 
+                             firstPointLocation, 
+                             capitalLettersData.capitalLettersLocation);
     }
     return firstSentenceTranslation;
 
