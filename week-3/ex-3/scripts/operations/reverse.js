@@ -1,4 +1,5 @@
 const reverse = (inputArray) => {
-    alert(`Вашият списък в обънат ред изглежда така: ${inputArray.reverse()}`)
+
+    alert(`Вашият списък в обърнат ред изглежда така: ${inputArray.reverse()}`)
     return inputArray.reverse();
 };

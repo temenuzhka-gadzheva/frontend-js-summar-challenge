@@ -1,5 +1,6 @@
-let sum = 0;
+
 const sumNumbers = (inputArray) => {
+    let sum = 0;
 
     inputArray.forEach(number => {
         sum += Number(number);

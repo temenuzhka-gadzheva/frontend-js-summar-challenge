@@ -1,4 +1,7 @@
 const ascendingOrder = (inputArray) => {
-    console.log(`Подредба на списъка във възходящ ред: ${inputArray.sort((a, b) => a - b)}`);
-    return inputArray.sort((a, b) => a - b);
+    
+   let arrayInAscending = inputArray.sort((a, b) => a - b);
+    console.log(`Подредба на списъка във възходящ ред: ${arrayInAscending}`);
+
+    return arrayInAscending;
 };

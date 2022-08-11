@@ -1,11 +1,10 @@
-let displaceArray = [];
-let newIndex;
 const displacement = (inputArray) => {
+    let displaceArray = [];
 
-    inputArray.forEach(el => {
-        newIndex = randomPositionGenerator(inputArray);
-        displaceArray.push(el, newIndex);
+    inputArray.forEach(number => {
+       let randomGenerateIndex = randomPositionGenerator(inputArray);
+           displaceArray.splice(randomGenerateIndex,0,number);
     });
 
-    console.log("New array: " + displaceArray);
+    return alert(`Вашият разбъркан списък от елементи изглежда така: ${displaceArray}`);
 };

@@ -1,4 +1,7 @@
 const descendingOrder = (inputArray) => {
-    console.log(`Подредба на списъка във низходящ ред ${ascendingOrder(inputArray).reverse()}`);
-    return ascendingOrder(inputArray).reverse();
+
+   let arrayInDescending = ascendingOrder(inputArray).reverse();
+    console.log(`Подредба на списъка в низходящ ред ${arrayInDescending}`);
+    
+    return arrayInDescending;
 };

@@ -1,15 +1,12 @@
-let isArraySymmetric = true;
-let arrayMiddleLength;
-let elementInRightSideInArray;
-
 const symmetric = (inputArray) => {
-    let element;
-    arrayMiddleLength = (inputArray.length + 1) / 2;
+
+   let isArraySymmetric  = true;
+   let arrayMiddleLength = (inputArray.length + 1) / 2;
 
     for (let i = 0; i < arrayMiddleLength; i++) {
 
-        element                   = inputArray[i];
-        elementInRightSideInArray = inputArray[inputArray.length - i - 1];
+       let element                   = inputArray[i];
+       let elementInRightSideInArray = inputArray[inputArray.length - i - 1];
 
         if (element !== elementInRightSideInArray) {
             isArraySymmetric = false;
@@ -18,9 +15,19 @@ const symmetric = (inputArray) => {
     if (isArraySymmetric === false) {
 
         alert(`Масивът: ${inputArray} не е симетричен!`);
+
+        if(exitFromProgram() === true){
+            return isUserExit;
+        }
+        
         return isArraySymmetric;
     }
     
     alert(`Масивът: ${inputArray}  е симетричен!`);
+
+    if(exitFromProgram() === true){
+        return isUserExit;
+    }
+
     return isArraySymmetric;
 };

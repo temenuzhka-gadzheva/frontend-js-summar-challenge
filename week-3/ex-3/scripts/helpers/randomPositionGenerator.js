@@ -1,7 +1,13 @@
-let inputArrayLenght;
+let maxNumber = 0;
+let minNumber = 0;
+let randomNumber;
+
 const randomPositionGenerator = (inputArray) => {
 
-    inputArrayLenght = inputArray.length;
+    maxNumber     = inputArray.length;
+    randomNumber =  Math.floor(Math.random() * 
+                   (maxNumber - minNumber)  + 
+                    minNumber);
 
-    return Math.random() * (inputArrayLenght - 0) + 0;
+    return randomNumber;
 };
