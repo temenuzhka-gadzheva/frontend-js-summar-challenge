@@ -19,30 +19,37 @@
             <button>Temperature converter calculator</button>
         </section>
 
-        <section class="calculator-container">
-            <article>
-                <div class="previous-value"></div>
-                <input type="text" id="calculator-screen" value="">
-            </article>
-            <article class="calculator-actions-container">
-                <button class="action--data-number">7</button>
-                <button class="action--data-number">8</button>
-                <button class="action--data-number">9</button>
-                <button id="operation--reset" class="operator">C</button>
-                <button id="operation--backup" class="operator">&lt</button>
-                <button class="action--data-number">4</button>
-                <button class="action--data-number">5</button>
-                <button class="action--data-number">6</button>
-                <button id="operation--minus" class="operator">-</button>
-                <button id="operation--division" class="operator">/</button>
-                <button class="action--data-number">1</button>
-                <button class="action--data-number">2</button>
-                <button class="action--data-number">3</button>
-                <button id="operation--plus" class="operator">+</button>
-                <button id="operation--multiplicaiton" class="operator">*</button>
-            </article>
-            <button id="operation--equal">=</button>
+        <section class="calculator">
+            <section class="wrapper">
+                <section class="calculator-container">
+                    <article class="screen">
+                        <div class="previous-value"></div>
+                        <input type="text" id="calculator-screen" value="">
+                    </article>
+                    <article class="calculator-actions-container">
+                        <button class="action--data-number">7</button>
+                        <button class="action--data-number">8</button>
+                        <button class="action--data-number">9</button>
+                        <button id="operation--reset" class="operator">C</button>
+                        <button id="operation--backup" class="operator">&lt</button>
+                        <button class="action--data-number">4</button>
+                        <button class="action--data-number">5</button>
+                        <button class="action--data-number">6</button>
+                        <button id="operation--minus" class="operator">-</button>
+                        <button id="operation--division" class="operator">/</button>
+                        <button class="action--data-number">1</button>
+                        <button class="action--data-number">2</button>
+                        <button class="action--data-number">3</button>
+                        <button id="operation--plus" class="operator">+</button>
+                        <button id="operation--multiplicaiton" class="operator">*</button>
+                    </article>
+                    <button id="operation--equal">=</button>
+                </section>
+                <section class="history-container"></section>
+            </section>
         </section>
+        <section class="history-table"></section>
+
     </section>
 
     <script src="scripts/standart-calculator/standart-operations.js"></script>

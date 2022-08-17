@@ -1,15 +1,28 @@
+let calculatorElement = document.querySelector(".calculator");
 
-console.log(isOperationsShow);
-const history = () => {
-    if (isOperationsShow === true) {
+console.log(calculatorElement);
+let historyTableElement = document.querySelector(".history-table");
+let historyInformation = document.createElement('table');
+
+const history = (isOperationsShow) => {
+    if (isOperationsShow) {
         let historyElement = document.querySelector(".history");
-    
-        console.log(historyElement);
-        if (historyElement !== null) {
-            historyElement.addEventListener("click", () => {
-                console.log("1");
+
+        historyElement.addEventListener("click", () => {
+            calculatorElement.style.display = "none";
+            historyTableElement.style.display = "block";
+
+            historyTableElement.appendChild(historyInformation);
+            historyArray.forEach(element => {
+                let historyRowInformation = document.createElement('tr');
+                let historyRowDataInformation = document.createElement('td');
+
+                historyRowDataInformation.textContent = element;
+                historyRowInformation.append;
+                historyTableElement.appendChild(historyRowInformation);
+                historyTableElement.appendChild(historyRowDataInformation);
             });
-        }
+        });
     }
 }
 

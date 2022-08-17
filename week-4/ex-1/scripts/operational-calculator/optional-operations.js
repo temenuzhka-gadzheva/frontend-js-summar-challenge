@@ -1,21 +1,15 @@
 let rootContainerElement = document.querySelector(".root");
 let operationsElement = document.createElement('button');
+let historyContainer = document.querySelector(".history-container");
+let operationalCalculatorButton = document.querySelector("#operational-calculator");
 let isOperationsShow = false;
-console.log(rootContainerElement);
 
-const optionalOperations = () => {
+operationsElement.classList.add("history");
+operationsElement.textContent = "operations";
+operationsElement.style.float = "right";
 
-    operationsElement.classList.add("history");
-    operationsElement.textContent = "operations";
-    operationsElement.style.float = "right";
-
-
-    let operationalCalculatorButton = document.querySelector("#operational-calculator");
-
-    operationalCalculatorButton.addEventListener('click', () => {
-        rootContainerElement.appendChild(operationsElement);
-        isOperationsShow = true;
-    });
-
-    return isOperationsShow;
-}
+operationalCalculatorButton.addEventListener('click', () => {
+    historyContainer.appendChild(operationsElement);
+    isOperationsShow = true;
+    history(isOperationsShow);
+});
