@@ -1,4 +1,4 @@
-const equalButton = document.querySelector('#operation--equal');
+const equalButton = document.querySelector('.operation--equal');
 
 equalButton.addEventListener('click', () => {
 

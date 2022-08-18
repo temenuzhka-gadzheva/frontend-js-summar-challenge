@@ -1,28 +1,25 @@
-let calculatorElement = document.querySelector(".calculator");
-
-console.log(calculatorElement);
-let historyTableElement = document.querySelector(".history-table");
-let historyInformation = document.createElement('table');
+let historyExpressionsContainer = document.querySelector(".history-expressions-container");
+let historyTableElement = document.createElement("table");
 
 const history = (isOperationsShow) => {
+
     if (isOperationsShow) {
-        let historyElement = document.querySelector(".history");
+        let historyElement = document.querySelector(".action--base-operations-button");
 
         historyElement.addEventListener("click", () => {
-            calculatorElement.style.display = "none";
-            historyTableElement.style.display = "block";
 
-            historyTableElement.appendChild(historyInformation);
             historyArray.forEach(element => {
-                let historyRowInformation = document.createElement('tr');
-                let historyRowDataInformation = document.createElement('td');
 
-                historyRowDataInformation.textContent = element;
-                historyRowInformation.append;
-                historyTableElement.appendChild(historyRowInformation);
-                historyTableElement.appendChild(historyRowDataInformation);
+                let historyTableRowElement = document.createElement("tr");
+                let historyTableDataElement = document.createElement("td");
+
+                historyTableDataElement.textContent = element;
+                historyTableRowElement.appendChild(historyTableDataElement);
+                historyTableElement.appendChild(historyTableRowElement);
+                historyExpressionsContainer.appendChild(historyTableElement);
+
             });
-        });
+        })
     }
 }
 

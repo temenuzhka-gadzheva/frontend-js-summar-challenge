@@ -1,15 +1,15 @@
-let rootContainerElement = document.querySelector(".root");
-let operationsElement = document.createElement('button');
-let historyContainer = document.querySelector(".history-container");
+let historyContainer = document.querySelector(".additional-operations-container");
 let operationalCalculatorButton = document.querySelector("#operational-calculator");
 let isOperationsShow = false;
+let historyElementButton = document.createElement("button");
 
-operationsElement.classList.add("history");
-operationsElement.textContent = "operations";
-operationsElement.style.float = "right";
+historyElementButton.classList.add("action--base-operations-button");
+historyElementButton.textContent = "operations";
 
 operationalCalculatorButton.addEventListener('click', () => {
-    historyContainer.appendChild(operationsElement);
+    historyContainer.appendChild(historyElementButton);
     isOperationsShow = true;
+    baseConverterCalculator.disabled = true;
+    operationalCalculatorButton.disabled = false;
     history(isOperationsShow);
 });

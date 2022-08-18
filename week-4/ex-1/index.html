@@ -10,58 +10,151 @@
 </head>
 
 <body>
-    <section class="root">
-        <section class="calculator-types-container">
-            <button id="standart-calculator">Standart calculator</button>
-            <button id="operational-calculator">Operational calculator </button>
-            <button>Conversion calculator</button>
-            <button>Currency converter calculator</button>
-            <button>Temperature converter calculator</button>
-        </section>
 
-        <section class="calculator">
-            <section class="wrapper">
-                <section class="calculator-container">
-                    <article class="screen">
-                        <div class="previous-value"></div>
-                        <input type="text" id="calculator-screen" value="">
-                    </article>
-                    <article class="calculator-actions-container">
+    <article class="navigation">
+        <button id="standart-calculator">Standart calculator</button>
+        <button id="operational-calculator">Operational calculator </button>
+        <button id="base-converter-calculator">Conversion calculator</button>
+    </article>
+
+    <section class="calculator-information-root-container">
+        <section class="base-calculator-container">
+
+            <article class="screen">
+                <div class="previous-value"></div>
+                <input type="text" id="calculator-screen" value="">
+            </article>
+
+            <article class="calculator-actions-container">
+
+                <section class="data--numbers">
+                    <section class="numbers">
                         <button class="action--data-number">7</button>
                         <button class="action--data-number">8</button>
                         <button class="action--data-number">9</button>
-                        <button id="operation--reset" class="operator">C</button>
-                        <button id="operation--backup" class="operator">&lt</button>
                         <button class="action--data-number">4</button>
                         <button class="action--data-number">5</button>
                         <button class="action--data-number">6</button>
-                        <button id="operation--minus" class="operator">-</button>
-                        <button id="operation--division" class="operator">/</button>
                         <button class="action--data-number">1</button>
                         <button class="action--data-number">2</button>
                         <button class="action--data-number">3</button>
-                        <button id="operation--plus" class="operator">+</button>
-                        <button id="operation--multiplicaiton" class="operator">*</button>
-                    </article>
-                    <button id="operation--equal">=</button>
+                    </section>
                 </section>
-                <section class="history-container"></section>
-            </section>
-        </section>
-        <section class="history-table"></section>
 
+                <section class="additional-operations">
+
+                    <section class="operations">
+
+                        <!-- base calculator-->
+
+                        <section class="base-operations">
+                            <button id="operation--reset" class="operator">C</button>
+                            <button id="operation--backup" class="operator">&lt</button>
+
+                            <button id="operation--minus" class="operator">-</button>
+                            <button id="operation--division" class="operator">/</button>
+
+                            <button id="operation--plus" class="operator">+</button>
+                            <button id="operation--multiplicaiton" class="operator">*</button>
+                        </section>
+
+                        <!-- temperature-->
+
+                        <section class="reset-back-up-container">
+                            <!--- <button id="operation--reset" class="operator">F</button>
+                            <button id="operation--backup" class="operator">C</button>
+                           -->
+                        </section>
+
+                        <section class="reverse-classic-container">
+                            <!--
+                            <button class="action--converter-reverse-button">reverse</button>
+                            <button class="action--converter-type-button">classic</button>
+                            -->
+                        </section>
+                        <section id="reset-back-up-container" class="reset-back-up-container">
+                            <!---
+                            <button class="action--data-converter-temperature"> T</button>
+                            <button class="action--data-converter-money"> $</button>
+                            -->
+                        </section>
+
+
+
+                        <!--
+                        <section class="base-operations">
+                            <button id="operation--reset" class="operator">C</button>
+                            <button id="operation--backup" class="operator">&lt</button>
+                            <button id="operation--reset" class="operator">CHF</button>
+                            <button id="operation--backup" class="operator">JPY</button>
+                        </section>
+                        <section class="reverse-classic-container">
+                            <button class="action--converter-money-reverse-button"
+                                id="reverse-change-color">reverse</button>
+                        </section>
+                    -->
+                        <!--<button class="action--converter-reverse-button">reverse</button> -->
+
+                        <!--<button id="operation--minus" class="operator">-</button>
+                <button id="operation--division" class="operator">/</button> -->
+
+                        <!--<button class="action--converter-type-button">classic</button> -->
+
+                    </section>
+                </section>
+
+                <!-- base calculator &&  money calculator -->
+                <button class="operation--equal">=</button>
+
+                <!-- temperature-->
+                <!--<button id="operation--equal-converter" class="operation--equal">=</button> -->
+
+            </article>
+
+        </section>
+
+        <section class="additional-operations-container">
+
+            <!--
+                 base converter &&  money convert calculator -->
+            <!--
+            <button class="action--converter-operations-button"> operations</button>
+            <button class="action--converter-type-button"> classic</button>
+            <button class="action--data-converter-temperature"> T</button>
+            <button class="action--data-converter-money"  "> $</button>
+                 -->
+
+
+            <!--money converter-->
+
+            <!--
+                 
+            <button class="action--converter-operations-button"> operations</button>
+            <button class="action--converter-type-button"> classic</button>
+            <button class="action--data-converter-temperature"> T</button>
+            <button id="action--data-converter-money"> $</button>
+            -->
+
+        </section>
+
+        <section class="history-expressions-container">
+        </section>
     </section>
 
     <script src="scripts/standart-calculator/standart-operations.js"></script>
-    <script src="scripts/standart-calculator/numbers.js"></script>
-    <script src="scripts/standart-calculator/operators.js"></script>
-    <script src="scripts/standart-calculator/equal.js"></script>
-    <script src="scripts/standart-calculator/reset.js"></script>
     <script src="scripts/standart-calculator/backUp.js"></script>
     <script src="scripts/standart-calculator/calculate.js"></script>
-    <script src="scripts/operational-calculator/optional-operations.js"></script>
+    <script src="scripts/standart-calculator/equal.js"></script>
+    <script src="scripts/standart-calculator/numbers.js"></script>
+    <script src="scripts/standart-calculator/operators.js"></script>
+    <script src="scripts/standart-calculator/reset.js"></script>
+
+    <script src="scripts/base-converter-calculator/base-converter.js"></script>
+
+    <script src="scripts/base-converter-calculator/temperature-calculator.js"></script>
+
     <script src="scripts/operational-calculator/history.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/operational-calculator/optional-operations.js"></script>
 </body>
 
 </html>
