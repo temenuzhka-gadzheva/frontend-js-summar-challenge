@@ -1,52 +1,75 @@
 
+let baseOperationsSection = document.querySelector("#base-operations");
+let equalButtonElement = document.querySelector(".operation--equal");
+
+let baseOperationReset = document.querySelector("#operation--reset");
+let baseOperationBackUp = document.querySelector("#operation--backup");
+let baseOperationMinus = document.querySelector("#operation--minus");
+let baseOperationDivision = document.querySelector("#operation--division");
+let baseOperationPlus = document.querySelector("#operation--plus");
+let baseOperationMultiply = document.querySelector("#operation--multiplicaiton");
+
+let reverseClassicSection = document.querySelector(".reverse-classic-container");
+
 const temperature = () => {
-    temperatureButton = document.querySelector(".action--data-converter-temperature");
-    console.log(temperatureButton);
-    let baseOperationsSectionElement = document.querySelector(".base-operations");
 
-    console.log(baseOperationsSectionElement);
-    let temperatureResetBackUpContainer = document.querySelector(".reset-back-up-container");
-    let temperatureReverseClassicContainer = document.querySelector(".reverse-classic-container");
-    let temperatureConverterContainer = document.querySelector("#reset-back-up-container");
+    historyContainer.style.display = "none";
 
+    equalButtonElement.style.float = "left";
+    equalButtonElement.style.width = "210px";
+    equalButtonElement.style.fontSize = "25px";
+    equalButtonElement.style.textAlign = "center";
 
 
-    let temperatureButtonElement = document.createElement("button");
-    let temperatureResetButtonElement = document.createElement("button");
+    if (isTemperatureClicked === true) {
 
-    temperatureButtonElement.classList.add("operator");
-    temperatureButtonElement.setAttribute("id", "operation--reset");
-    temperatureButtonElement.textContent = "C";
+        baseOperationReset.parentElement.removeChild(baseOperationReset);
+        baseOperationBackUp.parentElement.removeChild(baseOperationBackUp);
+        baseOperationMinus.parentElement.removeChild(baseOperationMinus);
+        baseOperationDivision.parentElement.removeChild(baseOperationDivision);
+        baseOperationPlus.parentElement.removeChild(baseOperationPlus);
+        baseOperationMultiply.parentElement.removeChild(baseOperationMultiply);
+        isTemperatureClicked = false;
+    }
 
-    temperatureResetButtonElement.classList.add("operator");
-    temperatureResetButtonElement.setAttribute("id", "operation--backup");
-    temperatureResetButtonElement.textContent = "F";
+    let farenheitButtonElement = document.createElement("button");
+    let resetButtonElement = document.createElement("button");
+
+    let reverseButtonElement = document.createElement("button");
+    let classicButtonElement = document.createElement("button");
+
+    let baseConverterTemperatureButtonElement = document.createElement("button");
+    let baseConverterMoneyButtonElement = document.createElement("button");
 
 
-    temperatureResetBackUpContainer.appendChild(temperatureButtonElement);
-    temperatureResetBackUpContainer.appendChild(temperatureResetButtonElement);
+    farenheitButtonElement.classList.add("operator");
+    resetButtonElement.classList.add("operator");
 
-    temperatureConverterContainer.appendChild(baseConverterTemperatureButtonElement);
-    baseConverterMoneyButtonElement.setAttribute("id", "temperature-container");
-    temperatureConverterContainer.appendChild(baseConverterMoneyButtonElement);
-    /* <button class="action--converter-reverse-button">reverse</button>
-     <button class="action--converter-type-button">classic</button>*/
+    reverseButtonElement.classList.add("action--converter-reverse-button");
+    classicButtonElement.classList.add("action--converter-type-button");
+
+    baseConverterMoneyButtonElement.classList.add("action--data-converter-money");
+    baseConverterTemperatureButtonElement.classList.add("action--data-converter-temperature");
+
+    farenheitButtonElement.textContent = "F";
+    resetButtonElement.textContent = "C";
+
+    reverseButtonElement.textContent = "reverse";
+    classicButtonElement.textContent = "classic";
+
+    baseConverterMoneyButtonElement.textContent = "$";
+    baseConverterTemperatureButtonElement.textContent = "T";
+    baseConverterTemperatureButtonElement.id = "temperature-container";
 
 
-    let temperatureReverseButtonElement = document.createElement("button");
-    temperatureReverseButtonElement.classList.add("action--converter-reverse-button");
-    temperatureReverseButtonElement.textContent = "reverse";
 
-    let temperatureClassicButtonElement = document.createElement("button");
-    temperatureClassicButtonElement.classList.add("action--converter-type-button");
-    temperatureClassicButtonElement.textContent = "classic";
+    baseOperationsSection.appendChild(farenheitButtonElement);
+    baseOperationsSection.appendChild(resetButtonElement);
 
-    temperatureReverseClassicContainer.appendChild(temperatureReverseButtonElement);
-    temperatureReverseClassicContainer.appendChild(temperatureClassicButtonElement);
+    reverseClassicSection.appendChild(reverseButtonElement);
+    reverseClassicSection.appendChild(classicButtonElement);
 
-    baseOperationsSectionElement.display = "none";
+    reverseClassicSection.appendChild(baseConverterTemperatureButtonElement);
+    reverseClassicSection.appendChild(baseConverterMoneyButtonElement);
 
-    baseOperationsSectionElement.appendChild(temperatureResetBackUpContainer);
-    baseOperationsSectionElement.appendChild(temperatureReverseClassicContainer);
-    baseOperationsSectionElement.appendChild(temperatureConverterContainer);
 }

@@ -3,13 +3,14 @@ let operationalCalculatorButton = document.querySelector("#operational-calculato
 let isOperationsShow = false;
 let historyElementButton = document.createElement("button");
 
-historyElementButton.classList.add("action--base-operations-button");
-historyElementButton.textContent = "operations";
+    historyElementButton.classList.add("action--base-operations-button");
+    historyElementButton.textContent = "operations";
 
-operationalCalculatorButton.addEventListener('click', () => {
-    historyContainer.appendChild(historyElementButton);
-    isOperationsShow = true;
-    baseConverterCalculator.disabled = true;
-    operationalCalculatorButton.disabled = false;
-    history(isOperationsShow);
-});
+    operationalCalculatorButton.addEventListener('click', () => {
+        historyContainer.appendChild(historyElementButton);
+        isOperationsShow = true;
+        baseConverterCalculator.disabled = true;
+        operationalCalculatorButton.disabled = false;
+        history(isOperationsShow);
+    });
+

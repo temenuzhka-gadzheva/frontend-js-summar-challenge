@@ -1,5 +1,6 @@
 let historyExpressionsContainer = document.querySelector(".history-expressions-container");
 let historyTableElement = document.createElement("table");
+let isHistoryTableShow = false;
 
 const history = (isOperationsShow) => {
 
@@ -17,9 +18,10 @@ const history = (isOperationsShow) => {
                 historyTableRowElement.appendChild(historyTableDataElement);
                 historyTableElement.appendChild(historyTableRowElement);
                 historyExpressionsContainer.appendChild(historyTableElement);
-
+                
             });
+            isHistoryTableShow = true;
         })
-    }
+    } 
 }
 

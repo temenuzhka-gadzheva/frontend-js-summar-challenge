@@ -147,6 +147,7 @@ table th {
 #operation--division,
 #operation--plus,
 #operation--multiplicaiton,
+.operator,
 .action--data-number {
     padding: 0px;
     width: 70px;
@@ -160,7 +161,8 @@ table th {
 #operation--reset,
 #operation--backup,
 .action--converter-reverse-button,
-#reverse-change-color {
+#reverse-change-color,
+.operator {
     border: 2px solid #b85450;
     background-color: #f8cecc;
 }
@@ -198,7 +200,7 @@ table th {
 .action--base-operations-button,
 .action--converter-operations-button,
 .action--converter-type-button {
-    width: 144px;
+    width: 140px;
     height: 350px;
     margin-top: 0px;
     font-size: 20px;
@@ -222,7 +224,7 @@ table th {
 .action--data-converter-money {
     padding: 0px;
     float: left;
-    width: 72px;
+    width: 70px;
     height: 67px;
     font-size: 25px;
     text-align: center;
@@ -236,7 +238,7 @@ table th {
 
 .action--converter-reverse-button,
 .action--converter-money-reverse-button {
-    width: 144px;
+    width: 140px;
     height: 70px;
     font-size: 20px;
 }
@@ -246,7 +248,8 @@ table th {
     height: 71px;
 }
 
-#currency-container, #temperature-container {
+#currency-container,
+#temperature-container {
     border: 2px solid #97b25b;
     background-color: #d5e8d4;
 }

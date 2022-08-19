@@ -1,5 +1,5 @@
-const equalButton = document.querySelector('.operation--equal');
 
+let equalButton = document.querySelector('.operation--equal');
 equalButton.addEventListener('click', () => {
 
     let currentValue = currentValueElement.value;
