@@ -13,7 +13,6 @@ standartCalculatorButton.addEventListener('click', () => {
     }
 
     if (isBaseConverterOperationsShow === true) {
-
         baseConverterOperationsButtonElement.parentElement.removeChild(baseConverterOperationsButtonElement);
         baseConverterClassicButtonElement.parentElement.removeChild(baseConverterClassicButtonElement);
         baseConverterTemperatureButtonElement.parentElement.removeChild(baseConverterTemperatureButtonElement);

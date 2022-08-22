@@ -11,6 +11,7 @@ let historyElementButton = document.createElement("button");
         isOperationsShow = true;
         baseConverterCalculator.disabled = true;
         operationalCalculatorButton.disabled = false;
-        history(isOperationsShow);
+        isBaseConverterOperationsShow = false;
+        history(isOperationsShow,isBaseConverterOperationsShow);
     });
 

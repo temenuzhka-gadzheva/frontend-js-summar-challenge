@@ -2,10 +2,16 @@ let historyExpressionsContainer = document.querySelector(".history-expressions-c
 let historyTableElement = document.createElement("table");
 let isHistoryTableShow = false;
 
-const history = (isOperationsShow) => {
+const history = (isOperationsShow, isBaseConverterOperationsShow) => {
 
     if (isOperationsShow) {
-        let historyElement = document.querySelector(".action--base-operations-button");
+        let historyElement;
+
+        if (isBaseConverterOperationsShow === true) {
+            historyElement = document.querySelector(".action--converter-operations-button");
+        } else {
+            historyElement = document.querySelector(".action--base-operations-button");
+        }
 
         historyElement.addEventListener("click", () => {
 
@@ -18,10 +24,10 @@ const history = (isOperationsShow) => {
                 historyTableRowElement.appendChild(historyTableDataElement);
                 historyTableElement.appendChild(historyTableRowElement);
                 historyExpressionsContainer.appendChild(historyTableElement);
-                
+
             });
             isHistoryTableShow = true;
         })
-    } 
+    }
 }
 

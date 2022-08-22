@@ -1,17 +1,16 @@
-
-let baseOperationsSection = document.querySelector("#base-operations");
-let equalButtonElement = document.querySelector(".operation--equal");
-
-let baseOperationReset = document.querySelector("#operation--reset");
-let baseOperationBackUp = document.querySelector("#operation--backup");
-let baseOperationMinus = document.querySelector("#operation--minus");
-let baseOperationDivision = document.querySelector("#operation--division");
-let baseOperationPlus = document.querySelector("#operation--plus");
-let baseOperationMultiply = document.querySelector("#operation--multiplicaiton");
-
-let reverseClassicSection = document.querySelector(".reverse-classic-container");
-
 const temperature = () => {
+
+    let baseOperationsSection = document.querySelector("#base-operations");
+    let equalButtonElement = document.querySelector(".operation--equal");
+
+    let baseOperationReset = document.querySelector("#operation--reset");
+    let baseOperationBackUp = document.querySelector("#operation--backup");
+    let baseOperationMinus = document.querySelector("#operation--minus");
+    let baseOperationDivision = document.querySelector("#operation--division");
+    let baseOperationPlus = document.querySelector("#operation--plus");
+    let baseOperationMultiply = document.querySelector("#operation--multiplicaiton");
+
+    let reverseClassicSection = document.querySelector(".reverse-classic-container");
 
     historyContainer.style.display = "none";
 
@@ -71,5 +70,14 @@ const temperature = () => {
 
     reverseClassicSection.appendChild(baseConverterTemperatureButtonElement);
     reverseClassicSection.appendChild(baseConverterMoneyButtonElement);
+
+    farenheitButtonElement.addEventListener("click", () => {
+     
+    });
+    
+    reverseButtonElement.addEventListener("click", () => {
+        isReverseClicked = true;
+
+    })
 
 }
