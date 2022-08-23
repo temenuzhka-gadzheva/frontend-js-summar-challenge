@@ -30,4 +30,3 @@ const history = (isOperationsShow, isBaseConverterOperationsShow) => {
         })
     }
 }
-

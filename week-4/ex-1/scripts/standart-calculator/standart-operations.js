@@ -6,7 +6,6 @@ standartCalculatorButton.addEventListener('click', () => {
 
     baseConverterCalculator.disabled = false;
     operationalCalculatorButton.disabled = false;
-
     if (isOperationsShow === true) {
         historyElementButton.parentElement.removeChild(historyElementButton);
         isOperationsShow = false;

@@ -1,6 +1,6 @@
-const currencyChange = (isMoneyClicked) => {
+const temperatureChange = (isTemperatureClicked) => {
 
-    if (isMoneyClicked === true) {
+    if (isTemperatureClicked === true) {
         let operatorButton = document.querySelectorAll('.operator');
         operatorButton.forEach(button => {
             button.addEventListener('click', (e) => {
@@ -68,5 +68,5 @@ const currencyChange = (isMoneyClicked) => {
     }
 }
 
-currencyChange();
+temperatureChange();
 

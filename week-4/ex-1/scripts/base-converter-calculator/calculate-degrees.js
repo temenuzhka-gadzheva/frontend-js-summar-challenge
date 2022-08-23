@@ -1,10 +1,10 @@
+const farenheit = 33.8;
 const calculateDegrees = (degree, operation) => {
-let result;
+    let result;
     switch (operation) {
         case "F":
-            result = `${degree * 33.8} F`;
+            result = `${degree * farenheit} F`;
             break;
     }
     return result;
 };
-calculateDegrees();

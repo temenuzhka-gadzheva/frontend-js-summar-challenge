@@ -6,7 +6,6 @@ let historyArray = [];
 let isHaveNewNumber = false;
 
 const numberButtons = document.querySelectorAll('.action--data-number');
-
 numberButtons.forEach(button => {
     button.addEventListener('click', (e) => {
 

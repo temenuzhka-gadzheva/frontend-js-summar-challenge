@@ -1,5 +1,5 @@
 const operatorButtons = () => {
-    
+
     let operatorButton = document.querySelectorAll('.operator');
 
     operatorButton.forEach(button => {
@@ -23,7 +23,7 @@ const operatorButtons = () => {
 
                 previousValueElement.textContent =
                     `${currentValue} 
-                    ${currentOperator}`;
+                      ${currentOperator}`;
 
                 return isHaveNewNumber = true;
             }
@@ -42,18 +42,17 @@ const operatorButtons = () => {
 
                 const equationString =
                     `${equationObject['firstOperand']}
-                     ${equationObject['operator']} 
-                     ${equationObject['secondOperand']}`;
+                        ${equationObject['operator']} 
+                        ${equationObject['secondOperand']}`;
 
                 let newValue = calculate(equationString);
 
                 previousValueElement.textContent = `${newValue} 
-                                                    ${currentOperator}`;
+                            ${currentOperator}`;
 
                 itemArray = [newValue, currentOperator];
 
                 isHaveNewNumber = true;
-                console.log(equationArray);
             }
         });
     });
