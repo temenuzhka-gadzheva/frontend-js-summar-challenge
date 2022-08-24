@@ -3,10 +3,9 @@ body {
     padding: 0px;
 }
 
-/*history*/
 table {
-    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 table th {
@@ -26,8 +25,8 @@ table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #d5e8d4;
     border: 2px solid #97b25b;
+    background-color: #d5e8d4;
 }
 
 .navigation {
@@ -35,22 +34,21 @@ table th {
 }
 
 .navigation button {
-    background-color: #dae8fc;
-    border: 2px solid #7393c3;
+    display: inline-block;
     padding: 15px 32px;
+    margin: 4px 2px;
+    font-size: 16px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
+    background-color: #dae8fc;
+    border: 2px solid #7393c3;
 }
 
 .calculator-information-root-container {
-    background-color: #dae8fc;
+    display: flex;
     width: 100%;
     height: 600px;
-    display: flex;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -64,22 +62,18 @@ table th {
     width: 350px;
     height: 350px;
     margin-left: 30%;
-    /*  background-color: red;*/
 }
 
 .history-expressions-container {
     width: 160px;
     height: 350px;
-    /* background-color: green;*/
 }
-
-/*base calculator */
 
 .screen,
 .operation--equal {
-    padding: 0px;
     width: 347px;
     height: 67px;
+    padding: 0px;
     background-color: white;
     border: 2px solid black;
 }
@@ -89,14 +83,14 @@ table th {
 }
 
 .previous-value {
+    padding-bottom: 10px;
     color: grey;
     text-align: right;
-    padding-bottom: 10px;
 }
 
 #calculator-screen {
-    padding: 0px;
     width: 347px;
+    padding: 0px;
     font-size: 30px;
     text-align: right;
     border: none;
@@ -104,13 +98,11 @@ table th {
 }
 
 .calculator-actions-container {
-    /*display: grid;*/
     margin: 0px;
     padding: 0px;
-    border: 0px;
     width: 350px;
     height: 213px;
-    /*grid-template-columns: repeat(4, 1fr);*/
+    border: 0px;
 }
 
 .data--numbers {
@@ -118,8 +110,8 @@ table th {
 }
 
 .numbers {
-    max-width: 200px;
     display: inline-grid;
+    max-width: 200px;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -128,8 +120,8 @@ table th {
 }
 
 .operations {
-    max-width: 140px;
     display: block;
+    max-width: 140px;
 }
 
 .base-operations {
@@ -149,9 +141,9 @@ table th {
 #operation--multiplicaiton,
 .operator,
 .action--data-number {
-    padding: 0px;
     width: 70px;
     height: 71px;
+    padding: 0px;
     font-size: 25px;
     text-align: center;
     background-color: #dae8fc;
@@ -188,13 +180,9 @@ table th {
     text-align: center;
 }
 
-/* optional calculator*/
-
 .additional-operations-container {
-    /* display: flex;*/
     width: 144px;
     height: 350px;
-    /*   background-color: blue;*/
 }
 
 .action--base-operations-button,
@@ -222,10 +210,10 @@ table th {
 
 .action--data-converter-temperature,
 .action--data-converter-money {
-    padding: 0px;
     float: left;
     width: 70px;
     height: 67px;
+    padding: 0px;
     font-size: 25px;
     text-align: center;
 }
@@ -234,8 +222,6 @@ table th {
     float: right;
 }
 
-/*temperature*/
-
 .action--converter-reverse-button,
 .action--converter-money-reverse-button {
     width: 140px;
@@ -243,7 +229,6 @@ table th {
     font-size: 20px;
 }
 
-/*money*/
 .action--converter-money-reverse-button {
     height: 71px;
 }
