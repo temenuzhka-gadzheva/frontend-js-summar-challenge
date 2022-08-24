@@ -45,8 +45,6 @@
 
                     <section class="operations">
 
-                        <!-- base calculator-->
-
                         <section id="base-operations" class="base-operations">
                             <button id="operation--reset" class="operator">C</button>
                             <button id="operation--backup" class="operator">&lt</button>
@@ -58,116 +56,59 @@
                             <button id="operation--multiplicaiton" class="operator">*</button>
                         </section>
 
-                        <!-- temperature-->
-
                         <section class="reset-back-up-container">
-                            <!--- <button id="operation--reset" class="operator">F</button>
-                            <button id="operation--backup" class="operator">C</button>
-                           -->
                         </section>
 
                         <section class="reverse-classic-container">
-                            <!--
-                            <button class="action--converter-reverse-button">reverse</button>
-                            <button class="action--converter-type-button">classic</button>
-                            -->
                         </section>
+
                         <section id="reset-back-up-container" class="reset-back-up-container">
-                            <!---
-                            <button class="action--data-converter-temperature"> T</button>
-                            <button class="action--data-converter-money"> $</button>
-                            -->
+
                         </section>
-
-
-
-                        <!--
-                        <section class="base-operations">
-                            <button id="operation--reset" class="operator">C</button>
-                            <button id="operation--backup" class="operator">&lt</button>
-                            <button id="operation--reset" class="operator">CHF</button>
-                            <button id="operation--backup" class="operator">JPY</button>
-                        </section>
-                        <section class="reverse-classic-container">
-                            <button class="action--converter-money-reverse-button"
-                                id="reverse-change-color">reverse</button>
-                        </section>
-                    -->
-                        <!--<button class="action--converter-reverse-button">reverse</button> -->
-
-                        <!--<button id="operation--minus" class="operator">-</button>
-                <button id="operation--division" class="operator">/</button> -->
-
-                        <!--<button class="action--converter-type-button">classic</button> -->
 
                     </section>
                 </section>
 
-                <!-- base calculator &&  money calculator -->
                 <button class="operation--equal">=</button>
-
-                <!-- temperature-->
-                <!--<button id="operation--equal-converter" class="operation--equal">=</button> -->
 
             </article>
 
         </section>
 
         <section class="additional-operations-container">
-
-            <!--
-                 base converter &&  money convert calculator -->
-            <!--
-            <button class="action--converter-operations-button"> operations</button>
-            <button class="action--converter-type-button"> classic</button>
-            <button class="action--data-converter-temperature"> T</button>
-            <button class="action--data-converter-money"  "> $</button>
-                 -->
-
-
-            <!--money converter-->
-
-            <!--
-                 
-            <button class="action--converter-operations-button"> operations</button>
-            <button class="action--converter-type-button"> classic</button>
-            <button class="action--data-converter-temperature"> T</button>
-            <button id="action--data-converter-money"> $</button>
-            -->
-
         </section>
 
         <section class="history-expressions-container">
         </section>
     </section>
 
-    <script src="scripts/standart-calculator/standart-operations.js"></script>
-    <script src="scripts/standart-calculator/backUp.js"></script>
-    <script src="scripts/standart-calculator/calculate.js"></script>
-    <script src="scripts/standart-calculator/equal.js"></script>
-    <script src="scripts/standart-calculator/numbers.js"></script>
-    <script src="scripts/standart-calculator/operators.js"></script>
-    <script src="scripts/standart-calculator/reset.js"></script>
-
-    <script src="scripts/base-converter-calculator/base-converter.js"></script>
-    <script src="scripts/base-converter-calculator/base-converter-elements.js"></script>
-
-    <script src="scripts/base-converter-calculator/temperature-calculator.js"></script>
-    <script src="scripts/base-converter-calculator/money-converter-calculator.js"></script>
-
-    <script src="scripts/operational-calculator/history.js"></script>
-    <script src="scripts/operational-calculator/optional-operations.js"></script>
-
-    <script src="scripts/base-converter-calculator/currency-buttons.js"></script>
-    <script src="scripts/base-converter-calculator/calculate-currency.js"></script>
-    <script src="scripts/base-converter-calculator/calculate-degrees.js"></script>
-
-    <script src="scripts/base-converter-calculator/temperature-buttons.js"></script>
-
-
-
-    <!--<script src="scripts/script.js"></script> -->
-
 </body>
+
+<script src="scripts/base-conveter-calculator/base-converter-calculator.js"></script>
+<script src="scripts/base-conveter-calculator/base-converter-options.js"></script>
+<script src="scripts/base-conveter-calculator/remove-base-operators.js"></script>
+
+<script src="scripts/base-helpers/back-up.js"></script>
+<script src="scripts/base-helpers/calculate.js"></script>
+<script src="scripts/base-helpers/equal-new-style.js"></script>
+<script src="scripts/base-helpers/equal.js"></script>
+<script src="scripts/base-helpers/numbers.js"></script>
+<script src="scripts/base-helpers/operations.js"></script>
+<script src="scripts/base-helpers/reset.js"></script>
+
+<script src="scripts/money-conveter-calculator/append-money-buttons.js"></script>
+<script src="scripts/money-conveter-calculator/convert-to-currency.js"></script>
+<script src="scripts/money-conveter-calculator/money-converter-calculator.js"></script>
+<script src="scripts/money-conveter-calculator/change-currency.js"></script>
+
+<script src="scripts/optional-calculator/history.js"></script>
+<script src="scripts/optional-calculator/optional-calculator.js"></script>
+
+<script src="scripts/standard-calculator/standard-calculator.js"></script>
+
+<script src="scripts/temperature-conveter-calculator/append-temperature-buttons.js"></script>
+<script src="scripts/temperature-conveter-calculator/convert-temperature.js"></script>
+<script src="scripts/temperature-conveter-calculator/convert-to-degrees.js"></script>
+<script src="scripts/temperature-conveter-calculator/temperature-converter-calculator.js"></script>
 
 </html>

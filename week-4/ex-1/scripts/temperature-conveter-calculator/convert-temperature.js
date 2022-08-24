@@ -1,6 +1,6 @@
-const currencyChange = (isMoneyClicked) => {
+const  temperatureChange = (isTemperatureClicked) => {
 
-    if (isMoneyClicked === true) {
+    if (isTemperatureClicked === true) {
         let operatorButton = document.querySelectorAll('.operator');
         operatorButton.forEach(button => {
             button.addEventListener('click', (e) => {
@@ -10,20 +10,21 @@ const currencyChange = (isMoneyClicked) => {
                     itemArray = [];
                 }
 
-                // let userCurrencyValue = 
-
-
-                // currency
                 let currentOperator = e.target.textContent;
-                // console.log(currentOperator);
-                // value
                 let currentValue = parseFloat(currentValueElement.value);
-
 
                 if (isNaN(currentValue)) {
                     currentValue = 0;
                 }
-
+                let isResetButtonCliked = reset();
+                console.log(isResetButtonCliked);
+                
+                if (isResetButtonCliked) {
+                    itemArray = [];
+                    equationArray = [];
+                    historyArray = [];
+                    isResetButtonCliked = false;
+                } 
                 if (!itemArray.length) {
 
                     itemArray.push(currentValue, currentOperator);
@@ -31,7 +32,6 @@ const currencyChange = (isMoneyClicked) => {
                     previousValueElement.textContent =
                         `${currentValue} `;
 
-                    // console.log(previousValueElement);
                     return isHaveNewNumber = false;
                 }
 
@@ -43,7 +43,7 @@ const currencyChange = (isMoneyClicked) => {
                         secondOperand: parseFloat(currentValue),
                         operator: itemArray[1]
                     }
-                    // console.log("Object " + equationObject);
+                     console.log("Object " + equationObject);
 
                     equationArray.push(equationObject);
 
@@ -52,9 +52,7 @@ const currencyChange = (isMoneyClicked) => {
                        ${equationObject['operator']} 
                        ${equationObject['secondOperand']}`;
 
-                    let newValue = calculateCurrency(equationObject['firstOperand'], equationObject['operator']);
-                    console.log(newValue);
-
+                    let newValue = calculateDegrees(equationObject['firstOperand'], equationObject['operation'])
                     previousValueElement.textContent = `${newValue} 
                                                       ${currentOperator}`;
 
@@ -66,7 +64,4 @@ const currencyChange = (isMoneyClicked) => {
             });
         });
     }
-}
-
-currencyChange();
-
+};

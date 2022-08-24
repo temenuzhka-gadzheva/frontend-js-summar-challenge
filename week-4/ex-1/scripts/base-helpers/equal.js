@@ -1,8 +1,8 @@
-const equalButton = () => {
+const equal = () => {
 
-    const equalButton = document.querySelector('.operation--equal');
+    let equalButton = document.querySelector('.operation--equal');
+
     equalButton.addEventListener('click', () => {
-
 
         let currentValue = currentValueElement.value;
         let equationObject;
@@ -33,40 +33,37 @@ const equalButton = () => {
 
         equationArray.push(equationObject);
 
-        const equationString =
+        let equationString =
             `${equationObject['firstOperand']} 
          ${equationObject['operation']} 
          ${equationObject['secondOperand']}`;
 
-
         if (isMoneyClicked) {
             previousValueElement.textContent = `${equationObject['firstOperand']} LV = 
-        ${calculateCurrency(equationObject['firstOperand'], equationObject['operation'])}`;
+                                                ${calculateCurrency(equationObject['firstOperand'],
+                                                                    equationObject['operation'])}`;
             historyArray.push(previousValueElement.textContent);
-
             currentValueElement.value = calculateCurrency(equationObject['firstOperand'], equationObject['operation']);
-        } if (isTemperatureClicked) {
+        }else if (isTemperatureClicked) {
 
 
             previousValueElement.textContent = `${equationObject['firstOperand']} C = 
-        ${calculateDegrees(equationObject['firstOperand'], equationObject['operation'])}`;
-
-            console.log(previousValueElement.textContent);
+                                                 ${calculateDegrees(equationObject['firstOperand'], equationObject['operation'])}`;
 
             historyArray.push(previousValueElement.textContent);
-
             currentValueElement.value = calculateDegrees(equationObject['firstOperand'], equationObject['operation']);
-            /* calculateDegrees();*/
+
+            reset();
 
         } else {
+
             previousValueElement.textContent = `${equationString} = ${calculate(equationString)}`;
             historyArray.push(previousValueElement.textContent);
-
             currentValueElement.value = calculate(equationString);
         }
         isHaveNewNumber = true;
         itemArray = [];
     });
+};
 
-}
-equalButton();
+equal();

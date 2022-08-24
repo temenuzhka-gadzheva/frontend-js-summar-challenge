@@ -1,6 +1,6 @@
-const temperatureChange = (isTemperatureClicked) => {
+const currencyChange = (isMoneyClicked) => {
 
-    if (isTemperatureClicked === true) {
+    if (isMoneyClicked === true) {
         let operatorButton = document.querySelectorAll('.operator');
         operatorButton.forEach(button => {
             button.addEventListener('click', (e) => {
@@ -10,15 +10,8 @@ const temperatureChange = (isTemperatureClicked) => {
                     itemArray = [];
                 }
 
-                // let userCurrencyValue = 
-
-
-                // currency
                 let currentOperator = e.target.textContent;
-                // console.log(currentOperator);
-                // value
                 let currentValue = parseFloat(currentValueElement.value);
-
 
                 if (isNaN(currentValue)) {
                     currentValue = 0;
@@ -31,7 +24,6 @@ const temperatureChange = (isTemperatureClicked) => {
                     previousValueElement.textContent =
                         `${currentValue} `;
 
-                    // console.log(previousValueElement);
                     return isHaveNewNumber = false;
                 }
 
@@ -43,7 +35,6 @@ const temperatureChange = (isTemperatureClicked) => {
                         secondOperand: parseFloat(currentValue),
                         operator: itemArray[1]
                     }
-                    // console.log("Object " + equationObject);
 
                     equationArray.push(equationObject);
 
@@ -53,7 +44,6 @@ const temperatureChange = (isTemperatureClicked) => {
                        ${equationObject['secondOperand']}`;
 
                     let newValue = calculateCurrency(equationObject['firstOperand'], equationObject['operator']);
-                    console.log(newValue);
 
                     previousValueElement.textContent = `${newValue} 
                                                       ${currentOperator}`;
@@ -68,5 +58,5 @@ const temperatureChange = (isTemperatureClicked) => {
     }
 }
 
-temperatureChange();
+currencyChange();
 
