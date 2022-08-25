@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <section class="wrapper">
+
+        <section class="calendar-container">
+
+            <section class="calendar-month-year-container">
+                <section class="month-year-display"></section>
+
+                <section class="previous-button-container">
+                    <button class="back-button">Back</button>
+                </section>
+
+                <section class="next-button-container">
+                    <button class="next-button">Next</button>
+                </section>
+            </section>
+
+            <section class="weekdays">
+                <p>Sunday</p>
+                <p>Monday</p>
+                <p>Tuesday</p>
+                <p>Wednesday</p>
+                <p>Thursday</p>
+                <p>Friday</p>
+                <p>Saturday</p>
+            </section>
+
+            <section class="calendar"></section>
+
+
+        </section>
+
+        <section class="add-event-modal">
+            <h2>Event</h2>
+            <input class="event-title" type="text" placeholder="Event name" />
+            <button class="save-event-button">Save</button>
+            <button class="cancel-event-button">Cancel</button>
+        </section>
+
+        <section class="remove-event-modal">
+            <h2>Event</h2>
+            <p class="event-name"></p>
+            <button class="delete-event-button">Delete</button>
+            <button class="close-event-button">Close</button>
+        </section>
+
+        <section class="modal-back-drop"></section>
+
+    </section>
+
+    <script src="scripts/load-calendar/load-calendar.js"></script>
+    <script src="scripts/open-calendar-modal/open-calendar-modal.js"></script>
+    <script src="scripts/close-calendar-modal/close-calendar-modal.js"></script>
+    <script src="scripts/save-event/save-event.js"></script>
+    <script src="scripts/remove-event/remove-event.js"></script>
+    <script src="scripts/buttons-calendar/navigate-buttons.js"></script>
+    <script src="scripts/buttons-calendar/modal-buttons.js"></script>
+</body>
+
+</html>
